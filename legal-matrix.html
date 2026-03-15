@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal Matrix BiH</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f3ee; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #f0ece2; }
+    ::-webkit-scrollbar-thumb { background: #c8c4b8; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useMemo, useEffect, useRef } = React;
+
+
+// ─── KOMPLETNI PODACI IZ TABELE (241 pitanje) ───────────────────────────────
+const LABOR_DATA = {
+  "01": {
+    group: "Ugovori i zapošljavanje",
+    label: "Zakon o radu FBiH",
+    icon: "📋",
+    color: "#4a90d9",
+    subsections: {
+      "01.01": { label: "Ugovori", items: [
+        {id:"01.01.01",text:"Da li je poslodavac sa zaposlenikom zaključio ugovor o radu (član 4.)?"},
+      ]},
+      "01.02": { label: "Sindikat", items: [
+        {id:"01.02.01",text:"Da li je poslodavac onemogućio organizovanje sindikata? (član 14. stav 1.)"},
+        {id:"01.02.02",text:"Da li je poslodavac stavio u nepovoljniji položaj radnika zbog članstva ili nečlanstva u sindikatu? (član 15. stav 2.)"},
+        {id:"01.02.03",text:"Da li je poslodavac omogućio pristup sindikalnim predstavnicima, odnosno osigurao uvjete za djelovanje sindikata? (Član 18.)"},
+      ]},
+      "01.03": { label: "Zaključivanje ugovora o radu", items: [
+        {id:"01.03.01",text:"Da li je poslodavac angažovao na radu lice mlađe od 15 godina? (Član 20. stav 1.)"},
+        {id:"01.03.02",text:"Da li je poslodavac zaključio ugovor o radu sa maloljetnikom? (Član 20 stav 2.)"},
+        {id:"01.03.03",text:"Da li je ugovor o radu zaključen u pisanoj formi (Član 24. stav 1)?"},
+        {id:"01.03.04",text:"Da li ugovor o radu sadrži podatke propisane odredbom člana 24. Zakona o radu?"},
+        {id:"01.03.05",text:"Da li je poslodavac uputio radnika na rad u inozemstvo bez pismene saglasnosti u pogledu uvjeta ugovora? (član 25.)"},
+        {id:"01.03.06",text:"Da li ugovor o radu za obavljanje poslova izvan prostorija poslodavca sadrži podatke propisane u odredbi člana 26. stav 2.?"},
+        {id:"01.03.07",text:"Da li je poslodavac zaključio ugovor koji je opasan ili štetan po zdravlje radnika ili koji ugrožava radnu okolinu (član 26. stav 3.)?"},
+        {id:"01.03.08",text:"Da li je radno-pravni status direktora riješen zaključivanjem ugovora o radu odnosno posebnim ugovorom (član 27.)?"},
+        {id:"01.03.09",text:"Da li je poslodavac radniku dostavio kopiju prijave na obavezno osiguranje u roku od 15 dana od dana zaključivanja ugovora? (Član 28.)"},
+        {id:"01.03.10",text:"Da li je poslodavac tražio od radnika podatke koji nisu u neposrednoj vezi sa radnim odnosom? (Član 29.)"},
+        {id:"01.03.11",text:"Da li je poslodavac prikupljao, obrađivao, koristio ili dostavljao trećim licima lične podatke radnika? (Član 30.)"},
+        {id:"01.03.12",text:"Da li je poslodavac zaključio ugovor o radu sa pripravnikom suprotno članu 32. Zakona o radu?"},
+      ]},
+      "01.04": { label: "Stručno osposobljavanje", items: [
+        {id:"01.04.01",text:"Da li je poslodavac ugovor o stručnom osposobljavanju zaključio u pisanoj formi i dostavio kopiju nadležnoj službi za zapošljavanje? (Član 34.)"},
+      ]},
+      "01.05": { label: "Radno vrijeme", items: [
+        {id:"01.05.01",text:"Da li je poslodavac zaključio ugovor o radu u kojem je puno ili nepuno radno vrijeme ugovoreno suprotno članu 36. Zakona o radu?"},
+        {id:"01.05.02",text:"Da li je poslodavac zaključio ugovor o radu sa maloljetnim radnikom na radno vrijeme duže od 35 sati sedmično?"},
+        {id:"01.05.03",text:"Da li je poslodavac od radnika zahtijevao da radi duže od skraćenog radnog vremena na poslovima sa štetnim uticajima? (Član 37.)"},
+        {id:"01.05.04",text:"Da li poslodavac od radnika zahtijeva prekovremeni rad suprotno članu 38. stav 1.?"},
+        {id:"01.05.05",text:"Da li je poslodavac o prekovremenom radu obavjestio nadležnu inspekciju rada? (Član 38. stav 2.)"},
+        {id:"01.05.06",text:"Da li je poslodavac naredio prekovremeni rad maloljetnom radniku? (Član 38. stav 3.)"},
+        {id:"01.05.07",text:"Da li je poslodavac trudnici ili majci djeteta do 3 god. naložio prekovremeni rad bez pismene izjave o dobrovoljnom pristanku? (Član 38. stav 4.)"},
+        {id:"01.05.08",text:"Da li je poslodavac izvršio preraspodjelu radnog vremena u skladu sa odredbom člana 39.?"},
+        {id:"01.05.09",text:"Da li je poslodavac trudnici naredio rad u preraspodjeli radnog vremena bez pisanog pristanka? (Član 39. stav 5.)"},
+        {id:"01.05.10",text:"Da li je poslodavac osigurao izmjenu smjena koje uključuju noćni rad? (Član 40. stav 2.)"},
+        {id:"01.05.11",text:"Da li je poslodavac obezbijedio posebnu zaštitu radnika koji rade noću? (Član 41. stav 3.)"},
+        {id:"01.05.12",text:"Da li je poslodavac naredio noćni rad trudnici počev od šestog mjeseca trudnoće? (Član 41. stav 5.)"},
+        {id:"01.05.13",text:"Da li je poslodavac maloljetnom radniku naredio da radi noću? (Član 42.)"},
+        {id:"01.05.14",text:"Da li poslodavac vodi propisane evidencije o radnicima i licima angažovanim na radu? (Član 43. stav 1.–3.)"},
+        {id:"01.05.15",text:"Da li je poslodavac predočio inspektoru rada evidencije propisane odredbom člana 43.?"},
+      ]},
+      "01.06": { label: "Odmori i odsustva", items: [
+        {id:"01.06.01",text:"Da li je poslodavac radniku omogućio odmor u toku radnog dana? (Član 44.)"},
+        {id:"01.06.02",text:"Da li je poslodavac radniku omogućio dnevni i sedmični odmor? (Član 45. i 46.)"},
+        {id:"01.06.03",text:"Da li je poslodavac uskratio radniku pravo na odmor? (Član 46. stav 3.)"},
+        {id:"01.06.04",text:"Da li je poslodavac radniku omogućio godišnji odmor u najkraćem trajanju? (Član 47. i 48.)"},
+        {id:"01.06.05",text:"Da li je poslodavac radniku uskratio pravo na godišnji odmor ili isplatio naknadu umjesto odmora? (Član 51.)"},
+        {id:"01.06.06",text:"Da li je poslodavac radniku uskratio pravo na naknadu plaće za godišnji odmor? (Član 52. stav 3. i 4.)"},
+        {id:"01.06.07",text:"Da li je poslodavac radniku omogućio korištenje plaćenog odsustva? (Član 53.)"},
+      ]},
+      "01.07": { label: "Zaštita radnika", items: [
+        {id:"01.07.01",text:"Da li je poslodavac radniku omogućio upoznavanje sa propisima u vezi sa radnim odnosima i sigurnošću na radu? (Član 55. stav 1.)"},
+        {id:"01.07.02",text:"Da li je poslodavac radniku uskratio pravo na naknadu plaće kada odbije da radi zbog opasnosti za život i zdravlje? (Član 55. stav 4.)"},
+        {id:"01.07.03",text:"Da li je poslodavac rasporedio maloljetnika na naročito teške fizičke poslove? (Član 57. stav 1.)"},
+        {id:"01.07.04",text:"Da li je poslodavac maloljetnom radniku osigurao ljekarski pregled najmanje jednom u dvije godine? (Član 58.)"},
+        {id:"01.07.05",text:"Da li je žena zaposlena na poslovima pod zemljom (u rudnicima)? (Član 59.)"},
+        {id:"01.07.06",text:"Da li je poslodavac odbio da zaposli ženu zbog trudnoće? (Član 60. stav 1.)"},
+        {id:"01.07.07",text:"Da li je poslodavac ženi za vrijeme trudnoće ili porođajnog odsustva otkazao ugovor o radu? (Član 60. stav 1.)"},
+        {id:"01.07.08",text:"Da li je poslodavac tražio podatke o trudnoći, osim ako radnica to zahtijeva? (Član 60. stav 3.)"},
+        {id:"01.07.09",text:"Da li je poslodavac ženi za vrijeme trudnoće/dojenja obezbijedio ostvarivanje prava iz člana 61.?"},
+        {id:"01.07.10",text:"Da li je poslodavac omogućio korištenje porođajnog odsustva? (Član 62.)"},
+        {id:"01.07.11",text:"Da li je poslodavac majci ili ocu djeteta omogućio rad polovinom punog radnog vremena? (Član 63. i 64.)"},
+        {id:"01.07.12",text:"Da li je poslodavac omogućio ženi da odsustvuje radi dojenja? (Član 65.)"},
+        {id:"01.07.13",text:"Da li je poslodavac roditelju djeteta sa težim smetnjama u razvoju onemogućio prava iz člana 69.?"},
+        {id:"01.07.14",text:"Da li je poslodavac radniku koji je pretrpio povredu na radu ili oboljenje otkazao ugovor o radu za vrijeme liječenja? (Član 71.)"},
+        {id:"01.07.15",text:"Da li je poslodavac radnika nakon privremene spriječenosti vratio na odgovarajuće poslove? (Član 72. stav 2.)"},
+        {id:"01.07.16",text:"Da li je poslodavac ponudio radniku sa promjenjenom radnom sposobnosti druge poslove? (Član 73.)"},
+        {id:"01.07.17",text:"Da li je poslodavac radniku sa promjenjenom radnom sposobnosti otkazao ugovor suprotno članu 74.?"},
+        {id:"01.07.18",text:"Da li je poslodavac radniku sa promjenjenom radnom sposobnosti isplatio otpremninu? (Član 74. stav 3.)"},
+      ]},
+      "01.08": { label: "Plaća i naknada plaće", items: [
+        {id:"01.08.01",text:"Da li je poslodavac isplatio plaću radniku u periodima od najduže 30 dana? (Član 79.)"},
+        {id:"01.08.02",text:"Da li je poslodavac isplatio plaću u novcu i uručio pismeni obračun plaće? (Član 79. stav 2. i 3.)"},
+        {id:"01.08.03",text:"Da li je poslodavac uručio radniku obračun plaće? (Član 80. stav 1.)"},
+        {id:"01.08.04",text:"Da li je poslodavac uskratio radniku pravo na povećanu platu (Član 76.)?"},
+        {id:"01.08.05",text:"Da li je poslodavac radniku isplatio plaću manju od plaće utvrđene kolektivnim ugovorom i pravilnikom o radu? (Član 78. stav 4.)"},
+        {id:"01.08.06",text:"Da li je poslodavac radniku isplatio naknadu plaće u skladu sa odredbom člana 81.?"},
+        {id:"01.08.07",text:"Da li je poslodavac svoje potraživanje prema radniku naplatio suprotno članu 82.?"},
+      ]},
+      "01.09": { label: "Naknada štete", items: [
+        {id:"01.09.01",text:"Da li je poslodavac radniku nadoknadio štetu u skladu sa odredbom člana 93. Zakona o radu?"},
+      ]},
+      "01.10": { label: "Prestanak ugovora o radu", items: [
+        {id:"01.10.01",text:"Da li je poslodavac zaključio ugovor o radu sa drugim radnikom suprotno članu 96. stav 3.?"},
+        {id:"01.10.02",text:"Da li je poslodavac omogućio radniku da se izjasni o elementima odgovornosti koja mu se stavlja na teret? (Član 101.)"},
+        {id:"01.10.03",text:"Da li je poslodavac uručio otkaz radniku u pisanoj formi i obrazložio ga? (Član 104.)"},
+        {id:"01.10.04",text:"Da li je poslodavac ispunio obaveze prema radniku koji je prestao sa radom prije isteka otkaznog roka? (Član 106. stav 1.)"},
+      ]},
+      "01.11": { label: "Privremeni raspored radnika", items: [
+        {id:"01.11.01",text:"Da li je poslodavac rasporedio radnika suprotno odredbi člana 108. stav 1.?"},
+        {id:"01.11.02",text:"Da li je poslodavac obračunao radniku plaću suprotno odredbi člana 108. stav 2.?"},
+      ]},
+      "01.12": { label: "Zbrinjavanje viška radnika", items: [
+        {id:"01.12.01",text:"Da li se poslodavac s više od 30 radnika, koji namjerava otkazati min. petorici, konsultirao sa vijećem zaposlenika? (Član 109.)"},
+        {id:"01.12.02",text:"Da li je poslodavac proveo postupak konsultiranja u skladu sa odredbom člana 110. stav 1. i 2.?"},
+        {id:"01.12.03",text:"Da li je poslodavac zaključio ugovor o radu suprotno članu 110. stav 3.?"},
+        {id:"01.12.04",text:"Da li je poslodavac uskratio radniku pravo na otpremninu? (Član 111.)"},
+      ]},
+      "01.13": { label: "Promjena poslodavca", items: [
+        {id:"01.13.01",text:"Da li je poslodavac-pravni prethodnik pisanim putem obavijestio radnika o prenošenju ugovora? (Član 117. stav 3.)"},
+        {id:"01.13.02",text:"Da li je poslodavac-pravni sljednik pribavio pisanu saglasnost radnika o prenosu ugovora? (Član 117. stav 1. i 2.)"},
+      ]},
+      "01.14": { label: "Pravilnik o radu", items: [
+        {id:"01.14.01",text:"Da li je poslodavac koji zapošljava više od 30 radnika donio i objavio pravilnik o radu? (Član 118.)"},
+      ]},
+      "01.15": { label: "Štrajk", items: [
+        {id:"01.15.01",text:"Da li je poslodavac stavio u nepovoljniji položaj radnika zbog organiziranja i sudjelovanja u štrajku? (Član 157. stav 1.)"},
+      ]},
+      "01.16": { label: "Radna knjižica", items: [
+        {id:"01.16.01",text:"Da li je poslodavac izvršio povrat radne knjižice? (Član 164. stav 2. i Član 176. stav 2.)"},
+      ]},
+      "01.17": { label: "Ugovori o privremenim i povremenim poslovima", items: [
+        {id:"01.17.01",text:"Da li je ugovor o privremenim i povremenim poslovima zaključen pod uvjetima člana 166.?"},
+        {id:"01.17.02",text:"Da li je ugovor o privremenim poslovima zaključen na način predviđen odredbom člana 167.?"},
+        {id:"01.17.03",text:"Da li je ugovor zaključen sa studentom shodno članu 166.a?"},
+      ]},
+      "01.18": { label: "Usklađivanje sa Zakonom", items: [
+        {id:"01.18.01",text:"Da li je poslodavac u roku od 6 mj. uskladio pravilnik o radu sa Zakonom? (Član 177.)"},
+        {id:"01.18.02",text:"Da li je poslodavac u roku od 3 mj. ponudio radniku zaključivanje novog ugovora? (Član 178.)"},
+      ]},
+      "01.19": { label: "Ponovljeni prekršaj i prekršaj prema maloljetniku", items: [
+        {id:"01.19.01",text:"Da li je poslodavac ponovio prekršaj iz člana 170. stav 1. i 3. i člana 171. stav 1.?"},
+        {id:"01.19.02",text:"Da li je poslodavac učinio prekršaj iz člana 171. stav 1. prema maloljetniku?"},
+        {id:"01.19.03",text:"Da li je poslodavac ponovio prekršaj prema maloljetniku?"},
+      ]},
+    }
+  },
+  "02": {
+    group: "Ugovori i zapošljavanje",
+    label: "Zakon o zapošljavanju stranaca",
+    icon: "🌍",
+    color: "#7b5ea7",
+    subsections: {
+      "02.01": { label: "Uvjeti za zapošljavanje", items: [
+        {id:"02.01.01",text:"Da li je poslodavac zaposlio stranca bez radne dozvole? (Član 7.)"},
+      ]},
+      "02.02": { label: "Zasnivanje radnog odnosa", items: [
+        {id:"02.02.01",text:"Da li je poslodavac sa strancem zaključio ugovor o radu u skladu sa čl. 2. Zakona o zapošljavanju stranaca?"},
+      ]},
+      "02.03": { label: "Način i postupak zapošljavanja", items: [
+        {id:"02.03.01",text:"Da li je poslodavac stranca rasporedio na radno mjesto u skladu sa izdatom radnom dozvolom? (Član 12. stav 1.)"},
+        {id:"02.03.02",text:"Da li je poslodavac radnu dozvolu strancu prenio na drugog poslodavca? (Član 12. stav 2.)"},
+        {id:"02.03.03",text:"Da li je poslodavac strancu produžio rad nakon prestanka važenja radne dozvole? (Član 13. stav 2.)"},
+      ]},
+    }
+  },
+  "03": {
+    group: "Prava radnika",
+    label: "Zakon o štrajku",
+    icon: "✊",
+    color: "#d9534f",
+    subsections: {
+      "03.01": { label: "Organiziranje štrajka", items: [
+        {id:"03.01.01",text:"Da li je sindikat organizirao štrajk u skladu sa odredbom člana 4.?"},
+        {id:"03.01.02",text:"Da li je sindikat objavio sporazum o poslovima na kojima se rad ne može prekidati? (Član 5. stav 8.)"},
+        {id:"03.01.03",text:"Da li je štrajk započet prije okončanja postupka mirenja? (Član 6. stav 1.)"},
+        {id:"03.01.04",text:"Da li je poslodavac zaposlenicima omogućio obavljanje poslova koji se ne mogu prekidati za vrijeme štrajka?"},
+        {id:"03.01.05",text:"Da li je poslodavac poduzeo isključenje zaposlenika koji ne sudjeluju u štrajku sukladno članu 7. stav 1.?"},
+        {id:"03.01.06",text:"Da li je poslodavac započeo isključivanje zaposlenika iz procesa rada prije utvrđenog roka? (Član 7. stav 2.)"},
+        {id:"03.01.07",text:"Da li je poslodavac isključio zaposlenike u broju koji je veći od polovine broja u štrajku?"},
+        {id:"03.01.08",text:"Da li je poslodavac za isključene zaposlenike uplatio doprinose na osnovi najniže plaće?"},
+        {id:"03.01.09",text:"Da li je poslodavac u toku štrajka zaposlio nove zaposlenike koji bi zamijenili učesnike u štrajku?"},
+      ]},
+    }
+  },
+  "04": {
+    group: "Prava radnika",
+    label: "Zakon o vijeću uposlenika",
+    icon: "🤝",
+    color: "#5cb85c",
+    subsections: {
+      "04.01": { label: "Opće odredbe", items: [
+        {id:"04.01.01",text:"Da li je poslodavac omogućio uposlenicima učešće u odlučivanju o ekonomskim i socijalnim pravima? (Član 2.)"},
+        {id:"04.01.02",text:"Da li je poslodavac najmanje svakih 6 mj. informirao vijeće uposlenika o rezultatima poslovanja i drugim pitanjima važnim za radnike?"},
+        {id:"04.01.03",text:"Da li se poslodavac prije donošenja odluke konzultirao sa vijećem zaposlenika?"},
+        {id:"04.01.04",text:"Da li je poslodavac pribavio prethodnu saglasnost vijeća uposlenika kod odluka iz člana 26.?"},
+        {id:"04.01.05",text:"Da li je poslodavac vijeću stavio na uvid dokumentaciju o uplati doprinosa? (Član 28. stav 2.)"},
+        {id:"04.01.06",text:"Da li je poslodavac članovima vijeća isplatio naknade plaća za rad u vijeću?"},
+        {id:"04.01.07",text:"Da li je poslodavac predsjednika vijeća nakon isteka funkcije vratio na odgovarajuće poslove? (Član 35.)"},
+        {id:"04.01.08",text:"Da li je poslodavac osigurao vijeću potreban prostor i tehničke uvjete za rad? (Član 36.)"},
+      ]},
+    }
+  },
+  "06": {
+    group: "Finansijske obaveze",
+    label: "Zakon o penzijskom i invalidskom osiguranju",
+    icon: "🏦",
+    color: "#20b2aa",
+    subsections: {
+      "06.01": { label: "Osnovne odredbe", items: [
+        {id:"06.01.01",text:"Da li je poslodavac omogućio korištenje prava licu kojemu to pravo ne pripada prema Zakonu o PIO?"},
+        {id:"06.01.02",text:"Da li je poslodavac osiguraniku suprotno odredbama Zakona uskratio ili ograničio prava koja mu pripadaju?"},
+      ]},
+    }
+  },
+  "99": {
+    group: "Finansijske obaveze",
+    label: "Fiskalizacija",
+    icon: "🧾",
+    color: "#e91e63",
+    subsections: {
+      "99.01": { label: "Pravna lica", items: [
+        {id:"99.01.01",text:"Da li subjekt nadzora klijentu izdaje fiskalni račun odštampan na fiskalnom uređaju, bez obzira da li to klijent zahtijeva?"},
+        {id:"99.01.02",text:"Da li subjekt nadzora posjeduje fiskalni sistem?"},
+        {id:"99.01.03",text:"Da li subjekt nadzora u slučaju neispravnosti fiskalnog sistema poduzima propisane aktivnosti?"},
+      ]},
+      "99.02": { label: "Fizička lica", items: [
+        {id:"99.02.01",text:"Da li subjekt nadzora posjeduje fiskalni sistem?"},
+        {id:"99.02.02",text:"Da li subjekt nadzora poduzima propisane aktivnosti u slučaju neispravnosti fiskalnog sistema?"},
+        {id:"99.02.03",text:"Da li subjekt nadzora klijentu izdaje fiskalni račun bez obzira da li to klijent zahtijeva?"},
+      ]},
+    }
+  },
+  "ZNR": {
+    group: "Zaštita na radu",
+    label: "Zaštita na radu",
+    icon: "🦺",
+    color: "#ff9800",
+    subsections: {
+      "ZNR.01": { label: "Opća kontrola i isprave", items: [
+        {id:"znr.01.01",text:"Da li subjekat nadzora posjeduje uredne isprave za obavljanje djelatnosti - upis u sudski registar i druge registre?"},
+      ]},
+      "ZNR.02": { label: "Opći akti", items: [
+        {id:"znr.02.01",text:"Da li je poslodavac donio opći akt kojim je utvrdio obaveze propisane zakonom o zaštiti na radu?"},
+        {id:"znr.02.02",text:"Da li je poslodavac u okviru plana razvoja obezbjedio sredstva za sprovođenje mjera zaštite na radu?"},
+        {id:"znr.02.03",text:"Da li je poslodavac organizovao obavljanje poslova zaštite na radu i rasporedio stručno lice? (radna mjesta s posebnim uvjetima)"},
+      ]},
+      "ZNR.03": { label: "Zdravstvena i radna sposobnost radnika", items: [
+        {id:"znr.03.01",text:"Da li su u organizaciji zabilježena profesionalna oboljenja ili proglašenje invalida I i II kategorije?"},
+        {id:"znr.03.02",text:"Da li je poslodavac radnika sa rješenjem o promjeni radne sposobnosti rasporedio na odgovarajuće radno mjesto?"},
+        {id:"znr.03.03",text:"Da li je poslodavac obavijestio organ uprave o smrtnom slučaju, teškoj povredi ili profesionalnom oboljenju?"},
+        {id:"znr.03.04",text:"Da li je poslodavac obezbijedio radniku periodičnu izmjenu smjena i max. 1 sedmicu neprekidnog noćnog rada?"},
+        {id:"znr.03.05",text:"Da li je poslodavac naredio prekovremeni ili noćni rad suprotno nalazu stručnog organa za ocjenu radne sposobnosti?"},
+      ]},
+      "ZNR.04": { label: "Radna mjesta sa posebnim uvjetima rada", items: [
+        {id:"znr.04.01",text:"Da li je poslodavac opštim aktom utvrdio radna mjesta sa posebnim uvjetima rada?"},
+        {id:"znr.04.02",text:"Da li je poslodavac za svako radno mjesto utvrdio uvjete rada i zahtjeve u pogledu sposobnosti radnika?"},
+        {id:"znr.04.03",text:"Da li je poslodavac zasnovao radni odnos bez prethodne provjere zdravstvenog stanja radnika za određeno radno mjesto?"},
+        {id:"znr.04.04",text:"Da li je poslodavac preduzeo mjere prevencije oboljenja i invalidnosti kod radnika?"},
+        {id:"znr.04.05",text:"Da li je poslodavac uputio radnika na ljekarski pregled prije raspoređivanja na radno mjesto sa posebnim uvjetima?"},
+        {id:"znr.04.06",text:"Da li je poslodavac dostavio podatke zdravstvenoj organizaciji o radnim mjestima sa štetnostima kojima je radnik izložen?"},
+        {id:"znr.04.07",text:"Da li je poslodavac ugovorio specifičnu zdravstvenu zaštitu (medicina rada) sa ovlaštenom ustanovom?"},
+        {id:"znr.04.08",text:"Da li je poslodavac utvrdio radna mjesta s posebnim uvjetima i rokove ljekarskih pregleda u skladu sa zakonom?"},
+        {id:"znr.04.09",text:"Da li je poslodavac radnika koji na periodičnom pregledu ne ispunjava uvjete privremeno rasporedio na odgovarajuće radno mjesto?"},
+        {id:"znr.04.10",text:"Da li je poslodavac dozvolio radniku otpočinjanje rada bez obavljenog ljekarskog pregleda?"},
+      ]},
+      "ZNR.05": { label: "Periodični pregledi i ispitivanja", items: [
+        {id:"znr.05.01",text:"Da li je poslodavac obezbijedio periodične preglede i ispitivanje sredstava rada, opreme i sredstava lične zaštite kod ovlaštene organizacije?"},
+        {id:"znr.05.02",text:"Da li je poslodavac opštim aktom propisao rokove i vrši preglede po postupku u skladu sa opštim aktom kod ovlaštene organizacije?"},
+      ]},
+      "ZNR.06": { label: "Obuka i provjera znanja", items: [
+        {id:"znr.06.01",text:"Da li je poslodavac donio Program obuke iz oblasti zaštite na radu i izvršio obuku radnika? (Član 40. Zakona o ZNR)"},
+        {id:"znr.06.02",text:"Da li je poslodavac izvršio provjeru znanja radnika za samostalan i bezbijedan rad?"},
+        {id:"znr.06.03",text:"Da li je poslodavac radnika koji nije pokazao zadovoljavajući uspjeh na provjeri rasporedio na odgovarajuće radno mjesto?"},
+        {id:"znr.06.04",text:"Da li je poslodavac dozvolio da radnik radi na radnom mjestu ako nije osposobljen za bezbijedan rad?"},
+      ]},
+      "ZNR.07": { label: "Lična i zaštitna sredstva", items: [
+        {id:"znr.07.01",text:"Da li je poslodavac obezbijedio adekvatna sredstva lične zaštite na mjestima gdje se opasnosti ne mogu drugačije otkloniti?"},
+        {id:"znr.07.02",text:"Da li je obezbijedio namjensko korištenje sredstava lične zaštite?"},
+        {id:"znr.07.03",text:"Da li je opštim aktom utvrđeno koja sredstva lične zaštite pripadaju radniku?"},
+      ]},
+      "ZNR.08": { label: "Evidencija", items: [
+        {id:"znr.08.01",text:"Da li poslodavac vodi propisanu evidenciju o: radnicima na posebnim poslovima, provjeri znanja, pregledima, povredama na radu, ljekarskim pregledima?"},
+        {id:"znr.08.02",text:"Da li je poslodavac dostavio organu uprave godišnji izvještaj o povredama na radu, profesionalnim oboljenjima i smrtnim slučajevima?"},
+      ]},
+      "ZNR.09": { label: "Odgovornost za zaštitu na radu", items: [
+        {id:"znr.09.01",text:"Da li organizacija, poslodavac i odgovorni radnici u svom djelokrugu sprovode mjere zaštite na radu?"},
+        {id:"znr.09.02",text:"Da li je poslodavac razmatrao inicijativu sindikata/radnika o mjerama ZNR i izvijestio u roku od 30 dana?"},
+        {id:"znr.09.03",text:"Da li je poslodavac odmah izvijestio inspekciju rada ako radnik odbije da radi zbog opasnosti po zdravlje?"},
+        {id:"znr.09.04",text:"Da li je poslodavac opštim aktom utvrdio provjeru uticaja alkohola i spriječio takve radnike da rade?"},
+        {id:"znr.09.05",text:"Da li je poslodavac obezbijedio zabranu pušenja u radnim prostorima i odredio posebne prostorije za pušenje?"},
+      ]},
+      "ZNR.10": { label: "Pregled radnih i pomoćnih prostorija", items: [
+        {id:"znr.10.01",text:"Da li je poslodavac obezbijedio opšte mjere zaštite radnika na radu?"},
+        {id:"znr.10.02",text:"Da li je poslodavac obezbijedio posebne mjere zaštite radnika na radu?"},
+      ]},
+      "ZNR.11": { label: "Tehnička dokumentacija i isprave", items: [
+        {id:"znr.11.01",text:"Da li je organizacija koja vrši projektovanje primjenila propisane mjere ZNR i izdala odgovarajuće isprave?"},
+        {id:"znr.11.02",text:"Da li je investitor obezbijedio jedinstvenu ispravu kada projektovanje vrši više organizacija?"},
+        {id:"znr.11.03",text:"Da li je izvođač građevinskih objekata izveo radove prema projektnoj dokumentaciji sa mjerama ZNR?"},
+        {id:"znr.11.04",text:"Da li je investitor sa više izvođača obezbijedio jedinstveni dokaz o tehničkom prijemu?"},
+        {id:"znr.11.05",text:"Da li je proizvođač mašina i uređaja primjenio mjere ZNR i izdao uputstvo za bezbjedno rukovanje?"},
+        {id:"znr.11.06",text:"Da li je proizvođač sredstava lične zaštite primjenio mjere ZNR i izdao uputstvo za upotrebu?"},
+        {id:"znr.11.07",text:"Da li je uvoznik sredstava rada pribavio garanciju usklađenosti sa međunarodnim konvencijama i uputstvo prevedeno na BHS?"},
+        {id:"znr.11.08",text:"Da li je poslodavac stavio u promet sredstva rada bez provjere usklađenosti sa propisima?"},
+        {id:"znr.11.09",text:"Da li je poslodavac koji obavlja djelatnost na privremenim radilištima izradio elaborat o uređenju radilišta i dostavio inspekciji 8 dana unaprijed?"},
+        {id:"znr.11.10",text:"Da li je glavni izvođač pri korištenju istog prostora od strane više organizacija izradio jedinstven elaborat zaštite na radu?"},
+      ]},
+      "ZNR.12": { label: "Kontrola zakonitosti ovlaštenih organizacija", items: [
+        {id:"znr.12.01",text:"Da li organizacija koja vrši periodične preglede ispunjava uvjete glede kadrova i tehničke opreme za oblast ZNR?"},
+        {id:"znr.12.02",text:"Da li je ovlaštena organizacija koja je izvršila preglede izdala isprave na propisan način?"},
+        {id:"znr.12.03",text:"Da li ljekarske preglede radnika na posebnim radnim mjestima vrše ovlaštene zdravstvene ustanove?"},
+      ]},
+      "ZNR.13": { label: "Inspekcijski nadzor ZNR", items: [
+        {id:"znr.13.01",text:"Da li je poslodavac onemogućio ili otežao vršenje inspekcijskog nadzora zaštite na radu?"},
+        {id:"znr.13.02",text:"Da li se fizičko/odgovorno lice odazvalo na poziv inspektora u roku od 24 sata?"},
+        {id:"znr.13.03",text:"Da li je poslodavac obavijestio inspektora o izvršenju upravne mjere?"},
+        {id:"znr.13.04",text:"Da li je poslodavac inspektoru dao lažnu prijavu ili lažne podatke?"},
+        {id:"znr.13.05",text:"Da li je poslodavac teže narušio red u toku vršenja inspekcijskog nadzora?"},
+      ]},
+      "ZNR.14": { label: "Kontrolni pregled", items: [
+        {id:"znr.14.01",text:"Da li je poslodavac postupio po rješenju inspektora rada za otklanjanje nedostataka ili po rješenju o zabrani rada?"},
+        {id:"znr.14.02",text:"Da li je poslodavac izvršio usmeno naloženu upravnu mjeru sa rokom 'odmah' radi otklanjanja opasnosti po život?"},
+        {id:"znr.14.03",text:"Da li je poslodavac izvršio upravnu mjeru u roku i na način koji je inspektor naredio?"},
+      ]},
+    }
+  }
+};
+
+// Build flat list of all items with section info
+function buildAllItems() {
+  const all = [];
+  Object.entries(LABOR_DATA).forEach(([secKey, sec]) => {
+    Object.entries(sec.subsections).forEach(([subKey, sub]) => {
+      sub.items.forEach(item => {
+        all.push({ ...item, secKey, subKey, secLabel: sec.label, subLabel: sub.label, secColor: sec.color });
+      });
+    });
+  });
+  return all;
+}
+const ALL_ITEMS = buildAllItems();
+const TOTAL = ALL_ITEMS.length;
+
+// ─── COMPONENTS ──────────────────────────────────────────────────────────────
+
+function ProgressRing({ pct, size = 56, color = "#9a6e10" }) {
+  const r = (size - 6) / 2;
+  const circ = 2 * Math.PI * r;
+  return (
+    <svg width={size} height={size} style={{ flexShrink: 0 }}>
+      <circle cx={size/2} cy={size/2} r={r} fill="none" stroke="#d0ccc2" strokeWidth={5}/>
+      <circle cx={size/2} cy={size/2} r={r} fill="none" stroke={color} strokeWidth={5}
+        strokeDasharray={`${circ * pct / 100} ${circ}`}
+        strokeLinecap="round" transform={`rotate(-90 ${size/2} ${size/2})`}
+        style={{ transition: "stroke-dasharray 0.5s ease" }}
+      />
+      <text x={size/2} y={size/2 + 4} textAnchor="middle" fontSize={12} fontWeight={700} fill={color} fontFamily="'IBM Plex Mono',monospace">{pct}%</text>
+    </svg>
+  );
+}
+
+const OPCIJE = [
+  { val: "da",         label: "Da" },
+  { val: "ne",         label: "Ne" },
+  { val: "djelimicno", label: "Djelimično" },
+  { val: "nisam",      label: "Nisam siguran/na" },
+];
+
+function CheckRow({ item, answer, onAnswer, compact }) {
+  return (
+    <div style={{
+      padding: compact ? "8px 14px" : "11px 16px",
+      borderRadius: 7, marginBottom: 3,
+      background: answer ? "rgba(154,110,16,0.06)" : "transparent",
+      borderLeft: answer ? "2px solid #9a6e1033" : "2px solid transparent",
+    }}>
+      <div style={{ fontSize: 12.5, lineHeight: 1.55, marginBottom: 7, color: "#4a4030" }}>
+        {item.text}
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+        <span style={{ fontSize: 9, color: "#8a7850", letterSpacing: 0.5, marginRight: 4 }}>{item.id}</span>
+        {OPCIJE.map(o => (
+          <button key={o.val} onClick={() => onAnswer(item.id, o.val)} style={{
+            padding: "3px 12px", borderRadius: 5, border: "none", cursor: "pointer",
+            fontFamily: "'IBM Plex Mono',monospace", fontSize: 11,
+            fontWeight: answer === o.val ? 700 : 400,
+            background: answer === o.val ? "#9a6e10" : "#e8e4da",
+            color: answer === o.val ? "#fff8e8" : "#8a7850",
+            outline: answer === o.val ? "none" : "1px solid #d0ccc2",
+            transition: "all 0.12s"
+          }}>{o.label}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SubSection({ subLabel, items, answers, onAnswer }) {
+  const [open, setOpen] = useState(false);
+  const done = items.filter(i => answers[i.id] === "da").length;
+  const ne = items.filter(i => answers[i.id] === "ne").length;
+  const unanswered = items.filter(i => answers[i.id] === null).length;
+  const answered = items.length - unanswered;
+  const pct = answered === 0 ? 0 : Math.round((done / answered) * 100);
+  return (
+    <div style={{ marginBottom: 6, borderRadius: 8, overflow: "hidden", border: "1px solid #d5d1c7" }}>
+      <div onClick={() => setOpen(o => !o)} style={{
+        padding: "10px 14px", cursor: "pointer", background: "#eae6dc",
+        display: "flex", alignItems: "center", gap: 10,
+        borderBottom: open ? "1px solid #d5d1c7" : "none"
+      }}>
+        <div style={{ flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+            <span style={{ fontSize: 12, color: "#7a6030", fontWeight: 500 }}>{subLabel}</span>
+            <span style={{ fontSize: 9, color: "#8a7850", letterSpacing: 1 }}>{done}/{items.length}</span>
+            <span style={{ fontSize: 9, color: "#5a9a40" }}>{done}× Da</span>
+            {ne > 0 && <span style={{ fontSize: 9, color: "#8a3020" }}>{ne}× Ne</span>}
+            {unanswered > 0 && <span style={{ fontSize: 9, color: "#8a7850" }}>{unanswered}× ?</span>}
+          </div>
+          <div style={{ height: 2, background: "#d2cec4", borderRadius: 1, overflow: "hidden" }}>
+            <div style={{ height: "100%", width: `${pct}%`, background: "#9a6e10", transition: "width 0.3s" }}/>
+          </div>
+        </div>
+        <span style={{ color: "#c8c4ba", transform: open ? "rotate(180deg)" : "none", transition: "0.2s", fontSize: 12 }}>▾</span>
+      </div>
+      {open && <div style={{ padding: "6px 2px" }}>
+        {items.map(item => <CheckRow key={item.id + "_" + subLabel} item={item} answer={answers[item.id]} onAnswer={onAnswer} compact />)}
+      </div>}
+    </div>
+  );
+}
+
+function SectionCard({ secKey, sec, answers, onAnswer, activeSection, setActiveSection }) {
+  const allItems = Object.values(sec.subsections).flatMap(s => s.items);
+  const done = allItems.filter(i => answers[i.id] === "da").length;
+  const ne = allItems.filter(i => answers[i.id] === "ne").length;
+  const pct = Math.round((done / allItems.length) * 100);
+  const isActive = activeSection === secKey;
+
+  return (
+    <div style={{ marginBottom: 10, borderRadius: 12, overflow: "hidden", border: `1px solid ${isActive ? sec.color + "44" : "#d2cec4"}`, background: "#edeae0", transition: "border 0.2s" }}>
+      <div onClick={() => setActiveSection(isActive ? null : secKey)} style={{
+        padding: "14px 18px", cursor: "pointer", background: isActive ? "#e2ddd3" : "#edeae0",
+        display: "flex", alignItems: "center", gap: 14, transition: "background 0.2s"
+      }}>
+        <span style={{ fontSize: 22 }}>{sec.icon}</span>
+        <div style={{ flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
+            <span style={{ fontFamily: "'Cormorant Garamond',serif", fontWeight: 700, fontSize: 15, color: "#2a2010" }}>{sec.label}</span>
+            <span style={{ fontSize: 10, color: "#8a7850", letterSpacing: 1 }}>{done}/{allItems.length}</span>
+            {ne > 0 && <span style={{ fontSize: 10, color: "#8a3020", background:"rgba(140,40,20,0.1)", padding:"1px 7px", borderRadius:4 }}>{ne}× NE</span>}
+            {done > 0 && pct === 100 && <span style={{ fontSize: 10, color: "#9a6e10" }}>✓ SVE DA</span>}
+          </div>
+          <div style={{ height: 3, background: "#d5d1c7", borderRadius: 2, overflow: "hidden" }}>
+            <div style={{ height: "100%", width: `${pct}%`, background: pct === 100 ? "#9a6e10" : sec.color, borderRadius: 2, transition: "width 0.4s" }}/>
+          </div>
+        </div>
+        <ProgressRing pct={pct} size={48} color={pct === 100 ? "#9a6e10" : sec.color}/>
+        <span style={{ color: "#c8c4ba", transform: isActive ? "rotate(180deg)" : "none", transition: "0.2s", fontSize: 14 }}>▾</span>
+      </div>
+      {isActive && (
+        <div style={{ padding: "10px 10px 12px", borderTop: "1px solid #d5d1c7" }}>
+          {Object.entries(sec.subsections).map(([subKey, sub]) => (
+            <SubSection key={subKey} subLabel={sub.label} items={sub.items} answers={answers} onAnswer={onAnswer}/>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── MAIN APP ─────────────────────────────────────────────────────────────────
+function App() {
+  const [answers, setAnswers] = useState(() => {
+    const init = {};
+    ALL_ITEMS.forEach(i => { init[i.id] = null; }); // null=nije odgovoreno, "da"=Da, "ne"=Ne
+    return init;
+  });
+  const [activeSection, setActiveSection] = useState(null);
+  const [search, setSearch] = useState("");
+  const [view, setView] = useState("sections");
+  const [pdfLoading, setPdfLoading] = useState(false);
+  const jsPDFRef = useRef(null);
+
+  // Load jsPDF from CDN once
+  useEffect(() => {
+    if (window.jspdf) { jsPDFRef.current = window.jspdf.jsPDF; return; }
+    const s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
+    s.onload = () => { jsPDFRef.current = window.jspdf.jsPDF; };
+    document.head.appendChild(s);
+  }, []);
+
+  async function exportPDF(kompanija) {
+    if (!jsPDFRef.current) { alert("PDF biblioteka se još učitava, pokušajte za trenutak."); return; }
+    setPdfLoading(true);
+    try {
+      const jsPDF = jsPDFRef.current;
+      const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+      const W = 210, margin = 14, colW = W - margin * 2;
+      const datum = new Date().toLocaleDateString("bs-BA");
+      const donePdf = Object.values(answers).filter(v => v === "da").length;
+      const nePdf = Object.values(answers).filter(v => v === "ne").length;
+      const answeredPdf = Object.values(answers).filter(v => v !== null).length;
+      const pct = Math.round((donePdf / TOTAL) * 100);
+
+      // ── helper ──────────────────────────────────────────────────────────────
+      let y = 0;
+      function newPageBg() {
+        doc.setFillColor(248, 246, 240);
+        doc.rect(0, 0, W, 297, "F");
+        doc.setFillColor(154, 110, 16);
+        doc.rect(0, 0, 3, 297, "F");
+      }
+      function checkPage(need = 8) {
+        if (y + need > 278) { doc.addPage(); newPageBg(); y = 16; }
+      }
+      function setFont(style, size, color) {
+        doc.setFont("helvetica", style);
+        doc.setFontSize(size);
+        if (color) doc.setTextColor(...color);
+        else doc.setTextColor(200, 175, 80);
+      }
+
+      // ══════════════════════════════════════════════════════════════════════
+      // STRANICA 1 — NASLOVNA / COVER PAGE (cijela A4, bez liste)
+      // ══════════════════════════════════════════════════════════════════════
+
+      // Tamna pozadina cijele stranice
+      doc.setFillColor(6, 5, 3);
+      doc.rect(0, 0, W, 297, "F");
+
+      // Zlatna vertikalna linija lijevo
+      doc.setFillColor(180, 130, 20);
+      doc.rect(0, 0, 3, 297, "F");
+
+      // Gornji dekorativni blok
+      doc.setFillColor(230, 225, 210);
+      doc.rect(3, 0, W - 3, 90, "F");
+      doc.setFillColor(140, 100, 15);
+      doc.rect(3, 88, W - 3, 1, "F");
+
+      // Logo shield - simple box
+      doc.setFillColor(180, 130, 20);
+      doc.roundedRect(margin, 14, 10, 12, 2, 2, "F");
+      doc.setFillColor(6, 5, 3);
+      doc.roundedRect(margin + 2, 16, 6, 8, 1, 1, "F");
+
+      // Naziv
+      setFont("bold", 30, [220, 185, 65]);
+      doc.text("Legal Matrix", margin + 18, 34);
+      setFont("bold", 14, [140, 100, 20]);
+      doc.text("BiH", margin + 18 + doc.getTextWidth("Legal Matrix") + 3, 34);
+
+      setFont("normal", 9, [80, 60, 15]);
+      doc.text("SISTEM PRAVNE PREVENCIJE I USKLAĐENOSTI", margin + 18, 43);
+
+      // Zlatna linija ispod naslova
+      doc.setFillColor(120, 86, 12);
+      doc.rect(margin + 18, 46, 80, 0.5, "F");
+
+      // Datum i preduzeće
+      setFont("normal", 9, [140, 110, 35]);
+      doc.text(`Datum izvještaja:  ${datum}`, margin + 18, 57);
+      if (kompanija) {
+        setFont("bold", 9, [180, 145, 50]);
+        doc.text(`Preduzeće:  ${kompanija}`, margin + 18, 65);
+      }
+
+      // ── OPIS (3 paragrafa) ──────────────────────────────────────────────────
+      const opisY = 110;
+      // Decorative quote mark
+      setFont("bold", 48, [30, 24, 8]);
+      doc.text("\u201C", margin, opisY + 8);
+
+      const p1 = "Legal Matrix je sistem pravne prevencije koji pomaže kompanijama da na " +
+        "vrijeme prepoznaju i spriječe pravne rizike u poslovanju. Kroz digitalnu provjeru " +
+        "usklađenosti sa ključnim zakonskim obavezama, biznisi dobijaju jasan pregled svog " +
+        "pravnog statusa i potencijalnih rizika.";
+      const p2 = "Nakon inicijalne provjere, proces se nastavlja kroz stručnu analizu i podršku " +
+        "pravnika, koji pomažu kompanijama da otklone uočene nedostatke i uspostave stabilan " +
+        "sistem pravne usklađenosti.";
+      const p3 = "Jer pravna sigurnost biznisa počinje prevencijom, a završava stručnom podrškom.";
+
+      const textX = margin + 10;
+      const textW = colW - 10;
+
+      setFont("normal", 11, [60, 45, 10]);
+      const lines1 = doc.splitTextToSize(p1, textW);
+      doc.text(lines1, textX, opisY + 4);
+      let ty = opisY + 4 + lines1.length * 6 + 6;
+
+      setFont("normal", 11, [80, 60, 20]);
+      const lines2 = doc.splitTextToSize(p2, textW);
+      doc.text(lines2, textX, ty);
+      ty += lines2.length * 6 + 8;
+
+      // Zlatna linija ispred zaključne rečenice
+      doc.setFillColor(180, 130, 20);
+      doc.rect(textX, ty - 3, 30, 1, "F");
+      ty += 2;
+
+      setFont("bold", 12, [100, 70, 10]);
+      const lines3 = doc.splitTextToSize(p3, textW);
+      doc.text(lines3, textX, ty);
+      ty += lines3.length * 7 + 14;
+
+      // ── PROGRES BOX (centiran) ───────────────────────────────────────────────
+      const boxW = 120, boxH = 46, boxX = (W - boxW) / 2, boxY = ty + 4;
+      doc.setFillColor(16, 13, 5);
+      doc.roundedRect(boxX, boxY, boxW, boxH, 4, 4, "F");
+      doc.setDrawColor(140, 100, 15);
+      doc.setLineWidth(0.6);
+      doc.roundedRect(boxX, boxY, boxW, boxH, 4, 4, "D");
+
+      const pctPdf = Math.round(answeredPdf/TOTAL*100);
+      setFont("bold", 28, [130, 90, 10]);
+      doc.text(`${pctPdf}%`, W / 2, boxY + 18, { align: "center" });
+      setFont("normal", 8, [120, 90, 20]);
+      doc.text("ODGOVORENO", W / 2, boxY + 25, { align: "center" });
+      setFont("normal", 9, [90, 160, 60]);
+      doc.text(`Da: ${donePdf}`, W / 2 - 18, boxY + 34, { align: "center" });
+      setFont("normal", 9, [180, 80, 60]);
+      doc.text(`Ne: ${nePdf}`, W / 2 + 18, boxY + 34, { align: "center" });
+      setFont("normal", 8, [100, 80, 20]);
+      doc.text(`Nije odgovoreno: ${TOTAL - answeredPdf}`, W / 2, boxY + 42, { align: "center" });
+
+      // Progres bar ispod boxa
+      const pbY = boxY + boxH + 6, pbW = boxW, pbX = boxX;
+      doc.setFillColor(30, 24, 8);
+      doc.roundedRect(pbX, pbY, pbW, 5, 1.5, 1.5, "F");
+      if (done > 0) {
+        doc.setFillColor(180, 130, 20);
+        doc.roundedRect(pbX, pbY, pbW * pct / 100, 5, 1.5, 1.5, "F");
+      }
+
+      // ── DONJI FOOTER NASLOVNE ────────────────────────────────────────────────
+      doc.setFillColor(230, 225, 210);
+      doc.rect(3, 278, W - 3, 19, "F");
+      doc.setFillColor(154, 110, 16);
+      doc.rect(3, 278, W - 3, 0.5, "F");
+      setFont("normal", 7, [80, 60, 15]);
+      doc.text("Legal Matrix BiH  ·  Sistem pravne usklađenosti", margin, 287);
+      doc.text("Dokument generisan automatski — nije pravni savjet", W - margin, 287, { align: "right" });
+      doc.text(datum, W / 2, 287, { align: "center" });
+
+      // ── NOVA STRANICA ZA SADRŽAJ ─────────────────────────────────────────────
+      doc.addPage();
+      newPageBg();
+      y = 16;
+
+      // ── SAŽETAK PO ZAKONIMA ──────────────────────────────────────────────────
+      setFont("bold", 12, [130, 90, 10]);
+      doc.text("PREGLED PO ZAKONIMA", margin, y); y += 6;
+      doc.setDrawColor(60, 45, 10);
+      doc.setLineWidth(0.4);
+      doc.line(margin, y, W - margin, y); y += 5;
+
+      Object.entries(LABOR_DATA).forEach(([k, sec]) => {
+        checkPage(9);
+        const items = Object.values(sec.subsections).flatMap(s => s.items);
+        const d = items.filter(i => answers[i.id] === 'da').length;
+        const p = Math.round((d / items.length) * 100);
+
+        // Progress bar
+        const barX = margin, barY = y + 1, barH = 4, barW = colW * 0.35;
+        doc.setFillColor(220, 215, 200);
+        doc.roundedRect(barX, barY, barW, barH, 1, 1, "F");
+        if (d > 0) {
+          doc.setFillColor(p === 100 ? 180 : 160, p === 100 ? 140 : 100, p === 100 ? 20 : 10);
+          doc.roundedRect(barX, barY, barW * p / 100, barH, 1, 1, "F");
+        }
+
+        setFont("normal", 9, [60, 48, 15]);
+        doc.text(`${sec.icon} ${sec.label}`, margin + barW + 4, y + 4);
+        setFont("bold", 9, p === 100 ? [180, 140, 20] : [180, 120, 30]);
+        doc.text(`${d}/${items.length} (${p}%)`, W - margin, y + 4, { align: "right" });
+        y += 9;
+      });
+
+      y += 4;
+
+      // ── DETALJI PO SEKCIJAMA ─────────────────────────────────────────────────
+      Object.entries(LABOR_DATA).forEach(([k, sec]) => {
+        const allSec = Object.values(sec.subsections).flatMap(s => s.items);
+        const answeredSec = allSec.filter(i => answers[i.id] !== null);
+        if (answeredSec.length === 0) return;
+        const dSec = allSec.filter(i => answers[i.id] === "da").length;
+        const pSec = Math.round((dSec / answeredSec.length) * 100);
+
+        checkPage(16);
+
+        // Section header
+        doc.setFillColor(235, 230, 218);
+        doc.rect(margin - 2, y - 2, colW + 4, 10, "F");
+        doc.setFillColor(154, 110, 16);
+        doc.rect(margin - 2, y - 2, 3, 10, "F");
+        setFont("bold", 11, [80, 55, 10]);
+        doc.text(`${sec.icon}  ${sec.label}`, margin + 4, y + 5);
+        setFont("bold", 10, pSec === 100 ? [180, 140, 20] : [200, 100, 30]);
+        doc.text(`${dSec}/${allSec.length}  ${pSec}%`, W - margin, y + 5, { align: "right" });
+        y += 14;
+
+        Object.entries(sec.subsections).forEach(([subKey, sub]) => {
+          const answeredItems = sub.items.filter(item => answers[item.id] !== null);
+          if (answeredItems.length === 0) return;
+          checkPage(10);
+          setFont("bold", 9, [80, 60, 20]);
+          doc.text(`  ${sub.label}`, margin, y); y += 5;
+
+          answeredItems.forEach(item => {
+            checkPage(7);
+            // answer handled above via answers[item.id]
+
+            // Odgovor badge
+            const ans = answers[item.id];
+            const badgeLabels = { da:"DA", ne:"NE", djelimicno:"DJELIM.", nisam:"?" };
+            const badgeLabel = badgeLabels[ans] || "?";
+            const badgeW = ans === "djelimicno" ? 16 : 10;
+            doc.setFillColor(200, 175, 130);
+            doc.roundedRect(margin + 2, y - 3.5, badgeW, 5, 1, 1, "F");
+            doc.setFontSize(6.5); doc.setFont("helvetica","bold");
+            doc.setTextColor(60, 40, 10);
+            doc.text(badgeLabel, margin + 2 + badgeW/2, y, {align:"center"});
+
+            // Text
+            const badgeOffset = ans === "djelimicno" ? 22 : 16;
+            const maxW = colW - badgeOffset;
+            const lines = doc.splitTextToSize(item.text, maxW);
+            setFont("normal", 7.5, ans ? [80, 60, 20] : [160, 140, 80]);
+            doc.text(lines, margin + badgeOffset, y);
+            setFont("normal", 6.5, [60, 48, 12]);
+            doc.text(item.id, W - margin, y, { align: "right" });
+            y += lines.length * 4.5 + 1.5;
+          });
+          y += 2;
+        });
+        y += 4;
+      });
+
+      // ── ZAKLJUČAK ────────────────────────────────────────────────────────────
+      checkPage(50);
+      y += 6;
+
+      // Zlatna linija
+      doc.setFillColor(140, 100, 15);
+      doc.rect(margin, y, colW, 1, "F");
+      y += 8;
+
+      setFont("bold", 13, [130, 90, 10]);
+      doc.text("ZAKLJUČAK", margin, y); y += 8;
+
+      // Sažetak odgovora
+      const zakljBrNe = Object.values(answers).filter(v => v === "ne").length;
+      const zakljBrDa = Object.values(answers).filter(v => v === "da").length;
+      const zakljAnswered = zakljBrDa + zakljBrNe;
+
+      setFont("normal", 10, [60, 48, 15]);
+      const zakljText1 = `Na osnovu provedene provjere usklađenosti, kompanija ${kompanija || ""}  je odgovorila na ${zakljAnswered} od ${TOTAL} pitanja. Od toga je ${zakljBrDa} odgovora potvrdno (Da), a ${zakljBrNe} odgovora negativno (Ne).`;
+      const zakljLines1 = doc.splitTextToSize(zakljText1, colW);
+      doc.text(zakljLines1, margin, y);
+      y += zakljLines1.length * 6 + 6;
+
+      if (zakljBrNe > 0) {
+        setFont("normal", 10, [60, 48, 15]);
+        const zakljText2 = `Identifikovane su ${zakljBrNe} oblasti koje zahtijevaju pravnu pažnju i korektivne mjere kako bi se postigla potpuna usklađenost sa važećim zakonodavstvom Federacije Bosne i Hercegovine.`;
+        const zakljLines2 = doc.splitTextToSize(zakljText2, colW);
+        doc.text(zakljLines2, margin, y);
+        y += zakljLines2.length * 6 + 8;
+      }
+
+      // Zlatni box - poziv na akciju
+      checkPage(30);
+      doc.setFillColor(245, 240, 225);
+      doc.roundedRect(margin, y, colW, 28, 3, 3, "F");
+      doc.setFillColor(140, 100, 15);
+      doc.roundedRect(margin, y, 3, 28, 1, 1, "F");
+
+      setFont("bold", 11, [130, 90, 10]);
+      doc.text("Preporučeni sljedeći korak", margin + 8, y + 9);
+      setFont("normal", 10, [180, 150, 60]);
+      const cta = "Kontaktirati pravnika za daljnje korake pri pravnoj prevenciji i otklanjanju uočenih nedostataka.";
+      const ctaLines = doc.splitTextToSize(cta, colW - 14);
+      doc.text(ctaLines, margin + 8, y + 18);
+      y += 36;
+
+      // ── FOOTER na svakoj stranici (osim naslovne) ────────────────────────────
+      const totalPages = doc.internal.getNumberOfPages();
+      for (let i = 2; i <= totalPages; i++) {
+        doc.setPage(i);
+        doc.setFillColor(230, 225, 210);
+        doc.rect(3, 283, W - 3, 14, "F");
+        doc.setFillColor(154, 110, 16);
+        doc.rect(3, 283, W - 3, 0.5, "F");
+        setFont("normal", 7, [80, 60, 15]);
+        doc.text("Legal Matrix BiH  ·  Sistem pravne usklađenosti", margin, 291);
+        doc.text(`Stranica ${i - 1} od ${totalPages - 1}`, W - margin, 291, { align: "right" });
+        doc.text(datum, W / 2, 291, { align: "center" });
+      }
+
+      doc.save(`LegalMatrix_${(kompanija || "izvjestaj").replace(/\s+/g, "_")}_${datum.replace(/\./g, "-")}.pdf`);
+    } catch(e) {
+      alert("Greška pri generisanju PDF-a: " + e.message);
+    }
+    setPdfLoading(false);
+  }
+
+  const setAnswer = (id, val) => setAnswers(p => ({ ...p, [id]: p[id] === val ? null : val }));
+  const done = Object.values(answers).filter(v => v === "da").length;
+  const answered = Object.values(answers).filter(v => v !== null).length;
+  const neDone = Object.values(answers).filter(v => v === "ne").length;
+  const pct = Math.round((done / TOTAL) * 100);
+
+  // Section-level stats
+  const sectionStats = useMemo(() => {
+    const stats = {};
+    Object.entries(LABOR_DATA).forEach(([k, sec]) => {
+      const items = Object.values(sec.subsections).flatMap(s => s.items);
+      const d = items.filter(i => answers[i.id] === "da").length;
+      const n = items.filter(i => answers[i.id] === "ne").length;
+      const ans = items.filter(i => answers[i.id] !== null).length;
+      stats[k] = { done: d, ne: n, answered: ans, total: items.length, pct: Math.round(d / items.length * 100) };
+    });
+    return stats;
+  }, [answers]);
+
+  // Search results
+  const searchResults = useMemo(() => {
+    if (!search.trim()) return [];
+    const q = search.toLowerCase();
+    return ALL_ITEMS.filter(i => i.text.toLowerCase().includes(q) || i.id.toLowerCase().includes(q) || i.secLabel.toLowerCase().includes(q)).slice(0, 40);
+  }, [search]);
+
+  const [showModal, setShowModal] = useState(false);
+  const [kompanija, setKompanija] = useState("");
+
+  function resetAll() {
+    const init = {};
+    ALL_ITEMS.forEach(i => { init[i.id] = null; });
+    setAnswers(init);
+  }
+
+  const fonts = `
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#f5f3ee}
+    input::placeholder{color:#2a2518;font-family:'IBM Plex Mono',monospace}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#f5f3ee}::-webkit-scrollbar-thumb{background:#d5d1c7;border-radius:3px}
+  `;
+
+  return (
+    <div style={{ minHeight: "100vh", background: "#f5f3ee", fontFamily: "'IBM Plex Mono',monospace", color: "#6a5830" }}>
+      <style>{fonts}</style>
+
+      {/* ── PDF MODAL ── */}
+      {showModal && (
+        <div style={{
+          position: "fixed", inset: 0, background: "rgba(4,4,10,0.88)", zIndex: 1000,
+          display: "flex", alignItems: "center", justifyContent: "center"
+        }}>
+          <div style={{ background: "#e8e4da", border: "1px solid #b0a898", borderRadius: 14, padding: "32px 28px", width: 380, boxShadow: "0 0 60px rgba(180,130,20,0.15)" }}>
+            <div style={{ fontFamily: "'Cormorant Garamond',serif", fontWeight: 800, fontSize: 20, color: "#e0d080", marginBottom: 6 }}>Generiši PDF izvještaj</div>
+            <div style={{ fontSize: 11, color: "#7a6840", marginBottom: 20, lineHeight: 1.7 }}>
+              PDF će sadržavati sve stavke sa statusom ✓/☐, progres po svakom zakonu i ukupni procenat usklađenosti.
+            </div>
+            <label style={{ display: "block", fontSize: 10, color: "#8a7850", letterSpacing: 2, marginBottom: 8 }}>NAZIV PREDUZEĆA (opcionalno)</label>
+            <input
+              value={kompanija}
+              onChange={e => setKompanija(e.target.value)}
+              placeholder="npr. Meso-promet d.o.o. Sarajevo"
+              style={{
+                width: "100%", padding: "11px 14px", borderRadius: 8,
+                border: "1px solid #b0a898", background: "#eae6dc",
+                color: "#6a5830", fontFamily: "'IBM Plex Mono'", fontSize: 12.5,
+                outline: "none", marginBottom: 20
+              }}
+              onFocus={e => e.target.style.borderColor = "#8a6020"}
+              onBlur={e => e.target.style.borderColor = "#b0a898"}
+              onKeyDown={e => e.key === "Enter" && (setShowModal(false), exportPDF(kompanija))}
+            />
+            <div style={{ display: "flex", gap: 10 }}>
+              <button onClick={() => setShowModal(false)} style={{
+                flex: 1, padding: "11px", background: "transparent", border: "1px solid #d2cec4",
+                borderRadius: 8, color: "#8a7850", cursor: "pointer", fontFamily: "'IBM Plex Mono'", fontSize: 12
+              }}>Odustani</button>
+              <button
+                onClick={() => { setShowModal(false); exportPDF(kompanija); }}
+                disabled={pdfLoading}
+                style={{
+                  flex: 2, padding: "11px", border: "none", borderRadius: 8,
+                  background: "linear-gradient(135deg,#7a4a08,#c08020)",
+                  color: "#fff8e0", fontFamily: "'Cormorant Garamond',serif",
+                  fontWeight: 800, fontSize: 15, cursor: "pointer",
+                  boxShadow: "0 0 20px rgba(160,100,20,0.25)"
+                }}
+              >{pdfLoading ? "Generisanje…" : "⬇ Preuzmi PDF"}</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── HEADER ── */}
+      <div style={{ padding: "14px 24px", borderBottom: "1px solid #d8d4ca", display: "flex", alignItems: "center", gap: 14, background: "#ede9e0" }}>
+        <div style={{ width: 36, height: 36, borderRadius: 8, border: "1.5px solid #3a2e10", display: "flex", alignItems: "center", justifyContent: "center", background: "#e8e4da" }}>
+          <svg width="16" height="18" viewBox="0 0 16 18"><path d="M8 1L1 5v6c0 3.8 2.8 7.3 7 8 4.2-.7 7-4.2 7-8V5L8 1z" fill="none" stroke="#9a6e10" strokeWidth="1.5" strokeLinejoin="round"/></svg>
+        </div>
+        <div>
+          <div style={{ fontFamily: "'Cormorant Garamond',serif", fontWeight: 800, fontSize: 18, color: "#2a2010", letterSpacing: 0.5 }}>
+            Legal Matrix <span style={{ color: "#2e2810", fontSize: 14, fontWeight: 600 }}>BiH</span>
+          </div>
+          <div style={{ fontSize: 9, color: "#2a2408", letterSpacing: 2.5 }}>SISTEM PRAVNE USKLAĐENOSTI</div>
+        </div>
+
+        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 12 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <ProgressRing pct={Math.round(answered/TOTAL*100)} size={52} color={answered===TOTAL ? "#9a6e10" : "#c07020"}/>
+            <div>
+              <div style={{ fontSize: 10, color: "#8a7850", letterSpacing: 1 }}>ODGOVORENO</div>
+              <div style={{ fontSize: 12, color: "#7a6030", fontWeight: 500 }}>{answered}/{TOTAL}</div>
+              <div style={{ fontSize: 10, color: "#8a7850" }}>{done} Da · {neDone} Ne · {Object.values(answers).filter(v=>v==="djelimicno").length} Djelim.</div>
+            </div>
+          </div>
+          {/* PDF BUTTON */}
+          <button onClick={() => setShowModal(true)} disabled={pdfLoading} style={{
+            padding: "8px 18px", borderRadius: 8, border: "none", cursor: "pointer",
+            background: "linear-gradient(135deg,#6a3a06,#a86c16)",
+            color: "#fff0c0", fontFamily: "'IBM Plex Mono'", fontSize: 11, fontWeight: 500,
+            boxShadow: "0 0 16px rgba(140,90,10,0.2)", transition: "all 0.15s",
+            display: "flex", alignItems: "center", gap: 6
+          }}
+            onMouseEnter={e => e.currentTarget.style.boxShadow = "0 0 28px rgba(180,120,20,0.4)"}
+            onMouseLeave={e => e.currentTarget.style.boxShadow = "0 0 16px rgba(140,90,10,0.2)"}
+          >
+            <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1h7l3 3v9H1V1z" stroke="#9a6e10" strokeWidth="1.2" strokeLinejoin="round"/><line x1="3" y1="7" x2="9" y2="7" stroke="#9a6e10" strokeWidth="1"/><line x1="3" y1="9.5" x2="9" y2="9.5" stroke="#9a6e10" strokeWidth="1"/><line x1="3" y1="4.5" x2="6.5" y2="4.5" stroke="#9a6e10" strokeWidth="1"/></svg>
+            {pdfLoading ? "Generisanje…" : "PDF Izvještaj"}
+          </button>
+          <button onClick={resetAll} style={{ padding: "6px 14px", background: "transparent", border: "1px solid #d5d1c7", borderRadius: 6, color: "#8a7850", cursor: "pointer", fontFamily: "'IBM Plex Mono'", fontSize: 11 }}>↺ Reset</button>
+        </div>
+      </div>
+
+      {/* ── TABS + SEARCH ── */}
+      <div style={{ padding: "12px 24px", borderBottom: "1px solid #d8d4ca", display: "flex", alignItems: "center", gap: 12, background: "#ede9e0" }}>
+        {["sections","search"].map(v => (
+          <button key={v} onClick={() => setView(v)} style={{
+            padding: "6px 16px", borderRadius: 6, border: "none", cursor: "pointer",
+            background: view === v ? "#d0ccc2" : "transparent",
+            color: view === v ? "#9a6e10" : "#8a7850",
+            fontFamily: "'IBM Plex Mono'", fontSize: 11, fontWeight: view === v ? 600 : 400,
+            transition: "all 0.15s"
+          }}>{v === "sections" ? "📂 Po zakonima" : "🔍 Pretraži"}</button>
+        ))}
+        {view === "search" && (
+          <input value={search} onChange={e => setSearch(e.target.value)}
+            placeholder="Unesite ključnu riječ ili šifru pitanja…"
+            style={{
+              flex: 1, padding: "7px 14px", borderRadius: 7, border: "1px solid #d2cec4",
+              background: "#eae6dc", color: "#6a5830", fontFamily: "'IBM Plex Mono'", fontSize: 12.5,
+              outline: "none", transition: "border 0.15s"
+            }}
+            onFocus={e => e.target.style.borderColor = "#8a6020"}
+            onBlur={e => e.target.style.borderColor = "#d2cec4"}
+          />
+        )}
+        {/* Ukupno po zakonima mini legend */}
+        {view === "sections" && (
+          <div style={{ marginLeft: "auto", display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {Object.entries(LABOR_DATA).map(([k, sec]) => {
+              const s = sectionStats[k];
+              return (
+                <div key={k} onClick={() => { setActiveSection(k === activeSection ? null : k); }}
+                  style={{
+                    display: "flex", alignItems: "center", gap: 5, padding: "4px 10px", borderRadius: 14,
+                    border: `1px solid ${activeSection === k ? sec.color + "66" : "#d5d1c7"}`,
+                    background: activeSection === k ? sec.color + "11" : "transparent",
+                    cursor: "pointer", transition: "all 0.15s"
+                  }}>
+                  <span style={{ fontSize: 13 }}>{sec.icon}</span>
+                  <span style={{ fontSize: 9, color: "#5a9a40" }}>{s.done}✓</span>
+                  {s.ne > 0 && <span style={{ fontSize: 9, color: "#8a3020" }}> {s.ne}✗</span>}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* ── BODY ── */}
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "28px 20px" }}>
+
+        {/* Overall progress bar */}
+        <div style={{ marginBottom: 24, padding: "16px 20px", borderRadius: 12, background: "#eae6dc", border: "1px solid #14140a", display: "flex", alignItems: "center", gap: 18 }}>
+          <div style={{ flex: 1 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
+              <span style={{ fontSize: 10, color: "#8a7850", letterSpacing: 2 }}>UKUPNI PREGLED</span>
+              <span style={{ fontSize: 10, color: "#7a6030" }}>{answered} od {TOTAL} odgovoreno</span>
+            </div>
+            <div style={{ display:"flex", gap:4, marginBottom:4 }}>
+              <div style={{ height: 6, flex: done, background: "#4a8a30", borderRadius: 3, transition:"flex 0.5s", minWidth: done>0?4:0 }}/>
+              <div style={{ height: 6, flex: neDone, background: "#8a3020", borderRadius: 3, transition:"flex 0.5s", minWidth: neDone>0?4:0 }}/>
+              <div style={{ height: 6, flex: TOTAL-answered, background: "#d2cec4", borderRadius: 3, transition:"flex 0.5s" }}/>
+            </div>
+            <div style={{ display:"flex", gap:16, fontSize:10 }}>
+              <span style={{color:"#5a9a40"}}>✓ Da: {done}</span>
+              <span style={{color:"#8a3020"}}>✗ Ne: {neDone}</span>
+              <span style={{color:"#8a7850"}}>? Nije odgovoreno: {TOTAL-answered}</span>
+            </div>
+          </div>
+          <div style={{ fontFamily: "'Cormorant Garamond',serif", fontWeight: 900, fontSize: 36, color: pct === 100 ? "#9a6e10" : "#e0d080", lineHeight: 1 }}>
+            {pct}<span style={{ fontSize: 16, color: "#8a7850" }}>%</span>
+          </div>
+        </div>
+
+        {/* ── VIEW: SECTIONS ── */}
+        {view === "sections" && (
+          <div>
+            {["Ugovori i zapošljavanje","Prava radnika","Zaštita na radu","Finansijske obaveze"].map(group => {
+              const groupSections = Object.entries(LABOR_DATA).filter(([,s]) => s.group === group);
+              const groupItems = groupSections.flatMap(([,s]) => Object.values(s.subsections).flatMap(sub => sub.items));
+              const groupDone = groupItems.filter(i => answers[i.id] !== null).length;
+              return (
+                <div key={group} style={{ marginBottom: 28 }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:12,
+                    padding:"10px 16px", background:"#e2ddd3", borderRadius:10, borderLeft:"4px solid #9a6e10" }}>
+                    <div style={{ flex:1 }}>
+                      <div style={{ fontFamily:"'Cormorant Garamond',serif", fontWeight:800, fontSize:17, color:"#4a3010" }}>{group}</div>
+                      <div style={{ fontSize:10, color:"#8a7040", marginTop:2 }}>
+                        {groupSections.length} {groupSections.length === 1 ? "zakon" : "zakona"} · {groupItems.length} pitanja · {groupDone} odgovoreno
+                      </div>
+                    </div>
+                  </div>
+                  {groupSections.map(([secKey, sec]) => (
+                    <SectionCard key={secKey} secKey={secKey} sec={sec} answers={answers} onAnswer={setAnswer}
+                      activeSection={activeSection} setActiveSection={setActiveSection}/>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* ── VIEW: SEARCH ── */}
+        {view === "search" && (
+          <div>
+            {search.trim().length === 0 ? (
+              <div style={{ textAlign: "center", padding: "60px 20px", color: "#b0a898", fontSize: 13 }}>
+                Unesite ključnu riječ da pretražite sva pitanja…
+              </div>
+            ) : searchResults.length === 0 ? (
+              <div style={{ textAlign: "center", padding: "60px 20px", color: "#8a7850", fontSize: 13 }}>
+                Nema rezultata za „{search}"
+              </div>
+            ) : (
+              <>
+                <div style={{ fontSize: 10, color: "#8a7850", letterSpacing: 1, marginBottom: 12 }}>{searchResults.length} REZULTATA</div>
+                {searchResults.map(item => (
+                  <div key={item.id + item.secKey} style={{ marginBottom: 4, borderRadius: 8, border: "1px solid #d5d1c7", background: "#eae6dc", overflow: "hidden" }}>
+                    <div style={{ padding: "6px 14px 4px", borderBottom: "1px solid #121208" }}>
+                      <span style={{ fontSize: 9, color: "#8a7850", letterSpacing: 1 }}>{item.secLabel} › {item.subLabel}</span>
+                    </div>
+                    <CheckRow item={item} answer={answers[item.id]} onAnswer={setAnswer}/>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
+        )}
+
+        <div style={{ marginTop: 24, padding: "14px 18px", borderRadius: 10, background: "#eae6dc", border: "1px solid #d5d1c7", fontSize: 11, color: "#b0a898", lineHeight: 1.8 }}>
+          ⚖ Ovaj alat je isključivo u svrhu planiranja i praćenja usklađenosti sa domaćim zakonodavstvom. Ne predstavlja pravni savjet. Za daljnje korake konsultujte pravnika.
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>
