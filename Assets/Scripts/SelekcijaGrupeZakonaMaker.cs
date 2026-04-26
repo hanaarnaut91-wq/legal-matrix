@@ -19,6 +19,7 @@ public class SelekcijaGrupeZakonaMaker : MonoBehaviour
     public List<int> brojOdgovorenihPitanjDa = new List<int>();
     public List<int> brojOdgovorenihPitanjaNe = new List<int>();
     public int ukupnoPitanjaSve = 0;
+    public TMP_Text percentText;
 
     //debug
     string debugStanje;
@@ -159,6 +160,9 @@ public class SelekcijaGrupeZakonaMaker : MonoBehaviour
         }
         int nijeOdgovoreno = ukupnoPitanjaSve - d - n;
         ukupniPregledText.text = "Da : " + d.ToString() + " · Ne : " + n.ToString() + " · Nije odgovoreno : " + nijeOdgovoreno.ToString() + "/" + ukupnoPitanjaSve.ToString();
+        float percent = 0;
+        percent = (((float)d + (float)n) / (float)ukupnoPitanjaSve) * 100f;
+        percentText.text = Mathf.Floor(percent).ToString() + "%";
     }
 
     public void Save()
@@ -166,16 +170,44 @@ public class SelekcijaGrupeZakonaMaker : MonoBehaviour
         string content = "";
         for (int i = 0; i < lines.Length; i++)
         {
-            content += lines[i];
+            content += lines[i] + "\n";
         }
         File.WriteAllText(path, content);
     }
 
     public void UpdateStatsNaZakonima()
     {
+
         for(int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.GetComponent<GrupaZakonaChecker>().UpdateStats();
+        }
+    }
+
+    public GameObject EvaluationPage;
+    public GameObject EvaluationFailed;
+
+    public void Evaluate()
+    {
+        int d = 0;
+        int n = 0;
+        for (int i = 0; i < brojOdgovorenihPitanjDa.Count; i++)
+        {
+            d += brojOdgovorenihPitanjDa[i];
+        }
+        for (int i = 0; i < brojOdgovorenihPitanjaNe.Count; i++)
+        {
+            n += brojOdgovorenihPitanjaNe[i];
+        }
+        Debug.Log("Broj odgovorenih pitanja : " + d + n);
+        if ((d + n) < 30)
+        {
+            EvaluationFailed.SetActive(true);
+            return;
+        }
+        else
+        {
+            EvaluationPage.SetActive(true);
         }
     }
 

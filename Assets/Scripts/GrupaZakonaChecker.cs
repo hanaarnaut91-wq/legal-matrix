@@ -6,6 +6,7 @@ public class GrupaZakonaChecker : MonoBehaviour
     public SelekcijaGrupeZakonaMaker sgm;
     public TMP_Text statsText;
     public TMP_Text imeGrupe;
+    public TMP_Text procenatText;
     int index;
     public void Start()
     {
@@ -23,5 +24,8 @@ public class GrupaZakonaChecker : MonoBehaviour
             }    
         }
         statsText.text = "broj pitanja: " + sgm.brojPitanjaUZakonu[index] + " · odgovoreno : " + sgm.brojOdgovorenihPitanjaUZakonu[index];
+        float procenat = 0;
+        procenat = (float)sgm.brojOdgovorenihPitanjaUZakonu[index] / (float)sgm.brojPitanjaUZakonu[index] * 100f;
+        procenatText.text = Mathf.Floor(procenat).ToString() + "%";
     }
 }

@@ -10,11 +10,13 @@ public class PitanjeScript : MonoBehaviour
     public int pitanjeIndex;
     public TMP_Text gdjeJePitanje;
 
+    public OdgovaranjeScript os;
     public SelekcijaGrupeZakonaMaker sgm;
 
     public void Start()
     {
-        sgm = GameObject.Find("Odgovaranje").gameObject.GetComponent<OdgovaranjeScript>().sgm;
+        os = GameObject.Find("Odgovaranje").gameObject.GetComponent<OdgovaranjeScript>();
+        sgm = os.sgm;
         NadjiPitanjeUBazi();
     }
 
@@ -35,6 +37,7 @@ public class PitanjeScript : MonoBehaviour
         sgm.lines[pitanjeIndex] = sgm.lines[pitanjeIndex] + "@";
         sgm.Save();
         UgasiOdgovore();
+        os.UpdateNaSpecifikaciju();
     }
 
     public void OdgovorNe()
@@ -42,6 +45,7 @@ public class PitanjeScript : MonoBehaviour
         sgm.lines[pitanjeIndex] += "#";
         sgm.Save();
         UgasiOdgovore();
+        os.UpdateNaSpecifikaciju();
     }
 
     public void UgasiOdgovore()

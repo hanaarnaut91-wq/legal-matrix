@@ -79,11 +79,43 @@ public class OdgovaranjeScript : MonoBehaviour
     //float percent = (4f / 97f) * 100f; procenat
     public void UpdateNaSpecifikaciju()
     {
+        int j = 0;
+        brojOdgovorenihPitanja = 0;
+        pitanjaGrupe.Clear();
+        //nadji zakon
+        for (int i = 0; i < sgm.lines.Length; i++)
+        {
+            if (sgm.lines[i] == ImegrupeZakona)
+            {
+                j = i + 2;
+            }
+        }
+
+        //nadji sva pitanja uz zakon
+        while (sgm.lines[j].Trim() != "%")
+        {
+            Debug.Log(j.ToString());
+            pitanjaGrupe.Add(sgm.lines[j]);
+            j++;
+        }
+
+        //reset index
+        j = 0;
+
+        //set up pitanja (ako je odgovoreno nece stavljat "da/ne"//
+        for (int i = 0; i < pitanjaGrupe.Count; i++)
+        {
+            //preconfig
+            if (pitanjaGrupe[i].Contains("#") || pitanjaGrupe[i].Contains("@"))
+            {
+                brojOdgovorenihPitanja++;
+            }
+        }
         specifikacijeText.text = "Broj pitanja : " + pitanjaGrupe.Count.ToString() + " · Odgovoreno : " + brojOdgovorenihPitanja;
         float procenat = 0;
         procenat = (float)brojOdgovorenihPitanja / (float)pitanjaGrupe.Count * 100f;
         procenatText.text = Mathf.Floor(procenat).ToString() + "%";
-    }
+    }   
 
     public void Resetuj()
     {
