@@ -1,0 +1,257 @@
+"OPĆE ODREDBE"+
+"\n="+
+"\n00.01.00 Da li subjekt nadzora sprječava i otežava inspektoru vršenje nadzora?"+
+"\n00.01.01 Da li subjekt nadzora odbija saradnju sa inspektorom u postupku poduzimanja preventivnih mjera i radnji i ne postupi po rješenju inspektora u postupku poduzimanja preventivnih mjera ?"+
+"\n00.01.02 Da li subjekt nadzora odbija sudjeluje u vršenju inspekcijskog nadzora?"+
+"\n00.01.03 Da li subjekt nadzora dao na uvid poslovne knjige i drugu službenu dokumentaciju, ažurne i točne podatke, materijale i obavijesti potrebne inspektoru za pravilno utvrđivanje svih činjenica i okolnosti u vršenju nadzora odmah na licu mjesta ili u roku koji inspektor naloži?"+
+"\n00.01.04 Da li subjekt nadzora odazovao na pozivu inspektora da u roku koji mu je naložen donese u službene prostorije tijela za inspekcijske poslove tražene podatke i dokumentaciju ili da dođe osobno radi davanja pojašnjenja u svezi s nadzorom"+
+"\n00.01.05 Da li je subjekt nadzora obavijestio mjerodavnog inspektora ili policijsku upravu o slučajevima nastanka opasnosti po život i zdravlje građana i materijalnih dobara, na način kako je to propisano zakonom ili drugim propisom"+
+"\n00.01.06 Da li subjekt nadzora subjekt nadzora dao uzorke proizvoda radi ispitivanja kod stručne institucije u Federaciji ovlaštene za ispitivanje kvalitete i zdravstvene ispravnosti proizvoda?"+
+"\n00.01.07 Da li subjekt nadzora - pravna osoba s javnim ovlastima vrši javne ovlasti sukladno Zakonu i drugim propisima"+
+"\n00.01.08 Da li subjekt nadzora subjekt nadzora kojem je povjereno da upravlja i eksploatizira javno dobro postupa u svojstvu dobrog domaćina?"+
+"\n00.01.09 Da li subjekt nadzora postupa po rješenju inspektora i izvršava upravnu mjeru koja mu je rješenjem naložena u roku utvrđenom u rješenju?"+
+"\n00.01.10 Da li subjekt nadzora u utvrđenom roku izvijestio inspektora o izvršenju upravne mjerea?"+
+"\n00.01.11 Da li subjekt nadzora spriječio da se upravna mjera izvrši putem druge osobe?"+
+"\n00.01.12 Da li subjekt je nadzora izvršio upravnu mjeru koja se sastoji u nenovčanoj obvezi?"+
+"\n00.01.13 Da lije subjekt nadzora izvrši upravnu mjeru koja mu je naložena rješenjem s novim rokom?"+
+"\n00.02.01 Da li subjekat obavlja djelatnost bez rješenja o upisu u sudski registar mjerodavnog suda?"+
+"\n00.02.02 Da li subjekat obavlja djelatnost bez rješenja mjerodavnog tijela za obavljanje djelatnosti?"+
+"\n00.02.03 Da li subjekat obavlja djelatnost u suprotnosti s rješenjem kojim mu je odobreno obavljanje određene djelatnosti?"+
+"\n00.02.04 Da li subjekat posjeduje dokumentaciju kojom potvrđuje da ispunjava minimalno-tehničke uvjete za bavljenje tom djelatnošću (rješenje mjerodavnog tijela, zapisnici mjerodavnih inspekcija i sl.)?"+
+"\n00.02.05 Da li je inspektor u kontroli kod subjekta nadzora utvrdio postojanje više od dva prekršaja"+
+"\n%"+
+"\nFISKALIZACIJA"+
+"\n="+
+"\n02.01.03. Da li subjekt nadzora klijentu izdao fiskalni račun odštampan na fiskalnom uređaju preko kojeg je evidentiran promet, bez obzira da li to klijent zahtjeva ?"+
+"\n09.01.01. Da li subjekt nadzora posjeduje fisalni sistem?"+
+"\n99.01.02. Da li subjekt nadzora u slučaju neispravnosti fiskalnog sistema ili djela fiskalnog sitema poduzeo propisane aktivnosti za otkalnanje uzroka neispravnosti fiskalnog sistema ili djela fiskalnog sitema?"+
+"\n99.02.01. Da li subjekt nadzora posjeduje fisalni sistem?"+
+"\n99.02.02. Da li subjekt nadzora u slučaju neispravnosti fiskalnog sistema ili djela fiskalnog sitema poduzeo propisane aktivnosti za otkalnanje uzroka neispravnosti fiskalnog sistema ili djela fiskalnog sitema?"+
+"\n99.02.03. Da li subjekt nadzora klijentu izdao fiskalni račun oštampan na fiskalnom uređaju preko kojeg je evidnetiran promet, bez obzira da li to klijent zahtjeva?"+
+"\n00.01.00 Da li subjekt nadzora sprječava i otežava inspektoru vršenje nadzora?"+
+"\n00.01.01 Da li subjekt nadzora odbija saradnju sa inspektorom u postupku poduzimanja preventivnih mjera i radnji i ne postupi po rješenju inspektora u postupku poduzimanja preventivnih mjera ?"+
+"\n00.01.02 Da li subjekt nadzora odbija sudjeluje u vršenju inspekcijskog nadzora?"+
+"\n00.01.03 Da li subjekt nadzora dao na uvid poslovne knjige i drugu službenu dokumentaciju, ažurne i točne podatke, materijale i obavijesti potrebne inspektoru za pravilno utvrđivanje svih činjenica i okolnosti u vršenju nadzora odmah na licu mjesta ili u roku koji inspektor naloži?"+
+"\n00.01.04 Da li subjekt nadzora odazovao na pozivu inspektora da u roku koji mu je naložen donese u službene prostorije tijela za inspekcijske poslove tražene podatke i dokumentaciju ili da dođe osobno radi davanja pojašnjenja u svezi s nadzorom"+
+"\n00.01.05 Da li je subjekt nadzora obavijestio mjerodavnog inspektora ili policijsku upravu o slučajevima nastanka opasnosti po život i zdravlje građana i materijalnih dobara, na način kako je to propisano zakonom ili drugim propisom"+
+"\n00.01.06 Da li subjekt nadzora subjekt nadzora dao uzorke proizvoda radi ispitivanja kod stručne institucije u Federaciji ovlaštene za ispitivanje kvalitete i zdravstvene ispravnosti proizvoda?"+
+"\n00.01.07 Da li subjekt nadzora - pravna osoba s javnim ovlastima vrši javne ovlasti sukladno Zakonu i drugim propisima"+
+"\n00.01.08 Da li subjekt nadzora subjekt nadzora kojem je povjereno da upravlja i eksploatizira javno dobro postupa u svojstvu dobrog domaćina?"+
+"\n00.01.09 Da li subjekt nadzora postupa po rješenju inspektora i izvršava upravnu mjeru koja mu je rješenjem naložena u roku utvrđenom u rješenju?"+
+"\n00.01.10 Da li subjekt nadzora u utvrđenom roku izvijestio inspektora o izvršenju upravne mjerea?"+
+"\n00.01.11 Da li subjekt nadzora spriječio da se upravna mjera izvrši putem druge osobe?"+
+"\n00.01.12 Da li subjekt je nadzora izvršio upravnu mjeru koja se sastoji u nenovčanoj obvezi?"+
+"\n00.01.13 Da lije subjekt nadzora izvrši upravnu mjeru koja mu je naložena rješenjem s novim rokom?"+
+"\n00.02.01 Da li subjekat obavlja djelatnost bez rješenja o upisu u sudski registar mjerodavnog suda?"+
+"\n00.02.02 Da li subjekat obavlja djelatnost bez rješenja mjerodavnog tijela za obavljanje djelatnosti?"+
+"\n00.02.03 Da li subjekat obavlja djelatnost u suprotnosti s rješenjem kojim mu je odobreno obavljanje određene djelatnosti?"+
+"\n00.02.04 Da li subjekat posjeduje dokumentaciju kojom potvrđuje da ispunjava minimalno-tehničke uvjete za bavljenje tom djelatnošću (rješenje mjerodavnog tijela, zapisnici mjerodavnih inspekcija i sl.)?"+
+"\n00.02.05 Da li je inspektor u kontroli kod subjekta nadzora utvrdio postojanje više od dva prekršaja"+
+"\n01.01.01 Da li je poslodavac sa zaposlenikom zaključio ugovor o radu"+
+"\n01.01.02  Da li je ugovor o obavljanju privremenih i povremenih poslova zaključen u skladu sa članom 166 i 167 ZOR-a?"+
+"\n01.01.03 Da li ugovor o radu sadrži sve podatke propisane Zakonom (član 24)"+
+"\n01.01.04 Zaključivanje ugovora o radu sa pripravnikom (član 32)"+
+"\n02.06.01 Poslodavac je dužan svakodnevno voditi evidenciju o radnicima i drugim licima angažovanim na radu ( Član 43)"+
+"\n03.02.01 Minimalni godišnji odmor i sticanje prava na godišnji odmora ( Član 47 i 48 stav 2 )"+
+"\n05.01.01 Da li je poslodavac isplatio plaću nakon obavljenog rada, u periodima isplate koji ne mogu biti duži od 30 dana ( Član 79)"+
+"\n05.03.01 Isplata plaće manja od plaće utvrđene kolektivnim ugovorom i pravilnikom o radu ( Član 78 stav 4)"+
+"\n05.04.01 Poslodavac je dužan uručiti radniku obračun plaće koju je bio dužan isplatiti (Član 80 )"+
+"\n01.01.01. Da li subjekat nadzora posjeduje uredne isprave za obavljanje djelatnosti - upis u sudski registar i druge registre ?"+
+"\n02.01.01. Da li je organizacija, odnosno poslodavac donio opšti akt, kojim je utvrdio obaveze propisane zakonom?"+
+"\n02.02.01. Da li je organizacija, odnosno poslodavac obezbjedio u okviru plana razvoja ili posebnog programa mjera zaštite na radu potrebna sredstva za sprovođenje i unapređivanje zaštite na radu sa rokovima za njihovu realizaciju ?"+
+"\n02.03.01. Da li je organizacija odnosno poslodavac kod kojih postoje radna mjesta sa posebnim uslovima rada organizovala obavljanje poslova zaštite na radu i da li je rasporedila radnika na poslove zaštite na radu koji ispunjava uslove u pogledu strućne spreme?"+
+"\n03.01.01. Da li su u organizaciji ili kod poslodavca zabilježena profesionalna oboljenja ili je izvršeno proglašenje invalida I i II kategorije radnika ?"+
+"\n03.01.02. Da li je organizacija odnosno poslodavac na osnovu konačnog rješenje nosioca osiguranja o pravu na raspored na drugo radno mjesto radnika rasporedili na radno mjesto koje odgovara tjelesnim i psihofizičkim spososbnostima na kome radnik može da radi puno radno vrijeme?"+
+"\n03.02.01. Da li je organizacija odnosno poslodavac obavjestila organ uprave nadležan za poslove rada o smrtnom slučaju, nesreči koja je zadisala dva ili više radnika , težoj povredi profesionalnom oboljenju ili pojavi koja bi mogla ugroziti život i zdravlje radnika na radu?"+
+"\n03.03.01. Da li je organizacija, odnosno poslodavac obezbijedio radniku periodičnu izmjenu smjena gdje se radi u smjenama , a kod rada noću neprekidan rad u trajanju od najduže jedne sedmice?"+
+"\n03.04.01. Da li je organizacija odnosno poslodavac naredio prekovremeni rad odnosno rad noću suprotno nalazu strucnog organa za ocjene radne sposobnosti?"+
+"\n04.01.01. Da li je organizacija, odnosno poslodavac opštim aktom, odnosno kolektivnim ugovorom utvrdio radna mjesta sa posebnim uslovima rada?"+
+"\n04.01.02. Da li je organizacija, odnosno poslodavac utvrdila za svako radno mjesto, uslove rada i zahtjeve u pogledu zdravstvenih i psihofizičkih sposobnosti radnika koji će raditi na tom radnom mjestu?"+
+"\n04.02.01. Da li je organizacija, odnosno poslodavac zasnovao radni odnos sa radnikom, a da predhodno nije utvrdio da njegovo zdrastveno stanje i psihofizičke sposobnosti odgovaraju za određeno radno mjesto?"+
+"\n04.02.02. Da li je organizacija, odnosno poslodavac preduzeo mjere kojima će spriječiti nastupanje oboljenja, odnosno invalidnosti kod radnika."+
+"\n04.02.03. Da li je organizacija, odnosno poslodavac uputio radnika na odgovarajući ljekarski pregled prije raspoređivanja na radno mjesto sa posebnim uslovima rada i da li takve preglede vrše u rokovima utvrđenim opštim aktom i kolektivnim ugovorom?"+
+"\n04.02.04. Da li je organizacija, odnosno poslodavac dostavio podatke organizaciji iz oblasti zdravstva o radnim mjestima  sa navedenim štetnostima i opasnostima kojima je radnik izložen?"+
+"\n04.02.05. Da li je organizacija odnosno poslodavac obavljanje poslova specifične zdravstvene zaštite ( medicine rada) ugovorio sa ovlaštenom ustanovom iz oblasti zdravstva?"+
+"\n04.02.06. Da li je organizacija odnosno poslodavac utvrdio radna mjesta sa posebnim uslovima rada u pogledu zdravstvene i psihofizičke sposobnosti radnika , način i rokove za obavljanje kao i postupak za obavljanje ljekarskih pregleda u skladu sa zakonom?"+
+"\n04.02.07. Da li je organizacija odnosno poslodavac radnika za koga se na periodičnom ljekarskom pregledu utvrdi da ne ispunjava uslove za obavljanje poslova sa posebnim uslovima rada privremeno rasporedila na odgovarajuće radno mjesto do ocjene radne sposobnosti?"+
+"\n04.02.08. Da li je organizacija ili poslodavac omogučio radniku da otpočne ili nastavi sa radom na radnom mjestu a da nije obavljen odgovarajući ljekarski pregled?"+
+"\n05.01.01. Da li je organizacija , odnosno poslodavac obezbjedio vršenje periodičnih pregleda i ispitivanje sredstava rada, opreme i sredstava lične zaštite periodične preglede i ispitivanja fizičkih, hemijskih, bioloških štetnosti i mikroklime u radnim i pomočnim prostorijama i radnim prostorima kod ovlaštene organizacije?"+
+"\n05.01.02. Da li je organizacija, odnosno poslodavac opštim aktom propisao rokove u kojima se vrše periodični pregledi i ispitivanja sredstava rada i opreme, radnih i pomoćnih prostorijama i sredstava lične zaštite koji ne podliježu obaveznim periodičnim pregledima i ispitivanjima i iste vrši po postupku i u rokovima u skladu sa opštim aktom kod ovlaštene organizacije?"+
+"\n06.01.01. Da li je organizacija odnosno poslodavac donio Program obuke iz oblasti zaštite na radu i izvršio obuku radnika iz oblasti zaštite na radu a u skladu sa odredbom člana 40 zakona ?"+
+"\n06.02.01. Da li je organizacija odnosno poslodavac izvršio provjeru radnika za samostalan i bezbjedan rad zaposlenika iz oblasti zaštite na radu i da li je zaposlenika koji prilikom provjere sposobnosti nije pokazao zadovoljavajući uspjeh rasporedio na radno mjesto koje odgovara njegovom znanju i spososbnostim ?"+
+"\n06.02.02. Da li je organizacija odnosno poslodavac nakon izvršene provjere sposobnosti radnika za samostalan i siguran rad a koji nije pokazao zadovoljavajući uspjeh rasporedio na radno mjesto koje odgovara njegovom znanju i spososbnostima ?"+
+"\n06.02.03. Da li je organizacija odnosno poslodavac omogućio da radnik radi na radnom mjestu i ako nije osposobljen za bezbjedan rad?"+
+"\n07.01.01. Da li je organizacjia, odnosno poslodavac obezbjedio odgovarajuća odnosno adekvatna sredstva lične zaštite odnosno , na mjestima na kojima se opasnosti i štetnosti kojima su izloženi radnici na radu ne mogu na drugi način otkloniti?"+
+"\n07.01.02. Da li je radnik određen opštim aktom odnosno poslodavac obezbjedio namjensko korištenje sredstava lične zaštite radnika?"+
+"\n07.01.03. Da li je opštim aktom odnosno kolektivnim ugovorom utvrđeno koja sredstva lične zaštite pripadaju radniku?"+
+"\n08.01.01. Da li organizacija, poslodavac vode propisanu evidnciju o: 1. Radnicima rasporđenim na radna mjesta sa posebnim uslovima rada; 2. Provjeri znanja radnika iz oblasti zaštitie na radu; 3. Izvršenim pregledima i ispitivanjima radne sredine, sredstava rada i opreme 4. povredama radnika na radu, profesionalnim oboljenjima , smrtnim slučajevima i njihovim uzrocima 5. ljekarskim pregledima?"+
+"\n08.02.01. Da li je organizacija odnosno poslodavac dostavio organu uprave nadležnom za poslove rada godišnji izvještaj o povredama radnika na radu , profesionalnim oboljenjima ,smrtnim slučajevima i njihovim uzrocima?"+
+"\n09.01.01. Da li organizacija, poslodavac odnosno radnik koji organizuje ili rukovodi procesom rada u skladu sa opštim aktom odnosno kolektivnim ugovorom svako u svom djelokrugu sprovode mjere zaštite na radu?"+
+"\n09.02.01. Da li je poslodavac razmotrio inicijativu sindikata , odnosno radnika na poduzimanju mjera zaštite na radu utvrđenih zakonom i o tome izvjestio sindikat i organ uprave nadležan za poslove inspekcije rada u rodu od 30 dana od dana podnošenja inicijative?"+
+"\n09.02.02. Da li je poslodavac,odmah izvjestio organ uprave nadležan za poslove inspekcije rada i sindikat ako radnik odbije da radi zbog toga što smatra da mu prijeti neposredna opasnost po život i zdravlje, a da takav postupak radnika nije opravdan ?"+
+"\n09.02.03. Da li je poslodavac opštim aktom odnosno kolektivnim ugovorom utvrdio slučajeve i način provjere da li je radnik pod uticajem alkohola ili drugih sredstava zavisnosti i u tim slučajevima sprjećio radnika da započne odnosno nastavi rad?"+
+"\n09.02.04. Da li su organizacija odnosno poslodavac obezbjedili zabranu upotrebe duhanskih prerađevina u radnim prostorima u kojima se obavlja tehničko-tehnološki proces odnosno gdje se obavlja rad sa strankama odnosno održavaju sjednice i drugi organizovani skupovi građana i odredio posebne prostorije za pušenje?"+
+"\n10.01.01. Da li je organizacija ili poslodavac obezbjedio opšte mjere zaštite radnika na radu?"+
+"\n10.01.02. Da li je organizacija ili poslodavac obezbjedio posebne mjere zaštite radnika na radu?"+
+"\n11.01.01. Da li je organizacija, odnosno poslodavac koja vrši projektovanje i izradu tehničke dokumentacije namijenjene za radne prostorije, i organizacija koja vrši projektovanje tehničko-tehnološkog procesa pri izradi iste primjenila propisane mjere zaštite na radu sa naznakom opasnosti sa predviđenim mjerama za njihovo otklanjanje i da li je izdala odgovarajuću ispravu u skladu sa Zakonom i propisima donesenim u skladu sa Zakonom?"+
+"\n11.02.01. Da li je investitor obezbjedio jedinstvenu ispravu u skladu sa Zakonom i propisima donesenim u skladu sa Zakonom, u slučaju kada projektovanje iz člana 10 stav 1 zakona vrši više organizacija odnosno poslodavaca?"+
+"\n11.03.01. Da li je izvođač građevinskih objekata namjenjenih za radne i pomočne prostorije odnosno izvođač tehničko-tehnološkog procesa ,izveo radove prema projektnoj dokumentaciji i obezbjedio dokaz od komisije za tehnički prijem da je objekat,odnosno teh.-tehnološki proces, izveden prema tehničkoj dokumentaciji u kojoj su projektovane mjere zaštite na radu?"+
+"\n11.03.02. Da li je investitor u slučaju kada u izgradnji odnosno izvođenju tehničko - tehnološkog procesa učestvuje više izvođača, obezbjedio jedinstveni dokaz od Komisije za tehnički prijem da je objekat odnosno tehničko- tehnološki proces izveden prema tehničkoj dokumentaciji u kojoj su uprojektovaner mjere zaštite na radu?"+
+"\n11.04.01. Da li je proizvođač mašina,uređaja na mehanizovani pogon, alata i drugih sredstava za rad i opreme pri projektovanju, konstruisanju odnosno proizvodnji primjenio propisane mjere zaštite na radu i izdao uputstvo za bezbjedan rad i održavanje i ispravu kojom se dokazuje da su proizvedeni u skladu sa propisima donesenim na osnovu zakona?"+
+"\n11.05.01. Da li je proizvođač sredstava lične zaštite pri projektovanju, konstruisanju odnosno proizvodnji primjenio mjere zaštite na radu, izdao uputstvo za njihovu upotrebu, održavanje, označio da su proizvedeni u skladu sa propisima i izdao odgovarajuću ispravu?"+
+"\n11.06.01. Da li je uvoznik sredstava rada, opreme i sredstava za ličnu zaštitu kupoprodajnim ugovorom obezbjedio garanciju da ista odgovaraju međunarodnim konvencijama, tehničkim propisima i propisima donesenim na osnovu zakona i pribavio odgovarajuće uputstvo za upotrebu i održavanje i preveo ih na jezik korisnika?"+
+"\n11.07.01. Da li je organizacija, odnosno poslodavac stavio u promet ili upotrebu sredstva rada, opremu i sredstva lične zaštite,a da nije utvrdio da ista odgovaraju propisima donesenim na osnovu zakona?"+
+"\n11.08.01. Da li je organizacija, odnosno poslodavac koji obavljaju građevinsku i drugu djelatnost na privremenim radilištima prije početka rada izradio elaborat o uređenju radilišta u skladu sa propisima donesenim na osnovu zakona i da li je elaborat o uređenju radilišta dostavio organu uprave za nadležnom za poslove inspekcije rada najmanje 8 (osam) dana prije početka rada na radilištu , odnosno da li je obezbjedio izvođenje radova prema tom elaboratu?"+
+"\n11.08.02. Da li je glavni izvođač radova, odnosno investitor kada se radi o više organizacija, odnosno poslodavaca koji koriste isti prostor za radilište izradio jedinstven elaborat zaštite na radu?"+
+"\n12.01.01. Da li organizacija, koja vrši periodične pregledei ispitivanja sredstava rada, opreme, fizičkih, hemijskih i bioloških štetnosti, mikroklime i sredstava lične zaštite ispunjava uslove u pogledu kadrova i tehničke opreme za obavljanje poslova iz oblasti zaštite na radu?"+
+"\n12.01.02. Da li je ovlaštena organizacija koja je izvršila periodične preglede i ispitivanja izdala odgovarajuće isprave, ili je izdala isprave a da prethodno nije izvršila pregled i ispitivanja na propisan način?"+
+"\n12.02.01. Da li ljekarske preglede radnika koji rade na radnim mjestima sa posebnim uslovima rada vrši organizacija u oblasti zdravstva sa organizovanom službom za zdravstvenu zaštitu radnika ili druge organizacije u oblasti zdravstva koje mogu vršiti odgovarajuće ljekarski pregledi?"+
+"\n13.01.01. Da li je poslodavac onemogučio ili znatno otežao vršenje inspekcijskog nadzora ili obavljanje radnje inspekcijskog postupka?"+
+"\n13.01.02. Da li se fizičko lice ili odgovorno lice u pravnom licu odazvalo na poziv inspektora , odnosno izostanak nije opravdalo u roku od 24 sata?"+
+"\n13.01.03. Da li je organizacija odnosno poslodavac obavjestio inspektora o izvršenju upravne mjere?"+
+"\n13.01.04. Da li je organizacija odnosno poslodavac inspektoru dao lažnu prijavu ili lažne podatke koji su u inspekcijskom postupku uzeti kao dokaz?"+
+"\n13.01.05. Da li je organizacija odnosno poslodavac teže narušio rad ili učinio veću nepristojnost u toku vršenja inspekcijskog nadzora ili obavljanja radnje inspekcijskog postupka?"+
+"\n14.01.01. Da li je organizacija, odnosno poslodavac postupio po rješenju inspektora rada za otklanjanje nedostataka ili po rješenju o zabrani rada odnosno po rješenju kojim su naložene preventivne mjere?"+
+"\n14.01.02. Da li je organizacija odnosno poslodavac izvršio upravnu mjeru usmeno izdatu sa rokom izvršenja odmah ako se istom mjerom i poduzetim radnjama otklanjaju neposredna opasnost po život i zdravlje ljudi , ili nastanak veće materijalne štete?"+
+"\n14.01.03. Da li je organizacija odnosno poslodavac izvršio upravnu mjeru u roku i na način koji je inspektor naredio?"+
+"\n%"+
+"\nZAKON O RADU"+
+"\n="+
+"\n01.01.01 Da li je poslodavac sa zaposlenikom zaključio ugovor o radu (član 4. )?"+
+"\n01.02.01. Da li je poslodavac onemogućio organizovanje sindikata? (član14. stav 1.)"+
+"\n01.02.02. Da li je poslodavac stavio u nepovoljniji položaj radnika zbog članstva ili nečlanstva u sindikatu? (član 15. stav 2.)"+
+"\n01.02.03. Da li je poslodavac omogućio pristup sindikalnim predstavnicima, odnosno osigurao uvjete za djelovanje sindikata? ( Član 18. )"+
+"\n01.03.01. Da li je poslodavac angažovao na radu lice mlađe od 15 godina ? (Član 20. stav 1.)"+
+"\n01.03.02. Da li je poslodavac zaključio ugovor o radu sa maloljetnikom ? (Član 20 stav 2.)"+
+"\n01.03.03. Da li je ugovor o radu zaključen u pisanoj formi (Član 24. stav 1)?"+
+"\n01.03.04. Da li ugovor o radu sadrži podatke propisane odredbom člana 24. Zakona o radu?"+
+"\n01.03.05. Da li je poslodavac uputio radnika na rad u inozemstvo bez pismene saglasnosti u pogledu uvjeta ugovora ? (član.25)"+
+"\n01.03.06. Da li ugovor o radu za obavljanje poslova izvan prostorija poslodavca sadrži podatke propisane u odredbi člana 26. stav 2. Zakona o radu?"+
+"\n01.03.07. Da li je poslodavac zaključio ugovor koji je opasan ili štetan po zdravlje radnika ili drugih lica ili koji ugrožava radnu okolinu (član 26.stav 3.) ?"+
+"\n01.03.08. Da li je radno-pravni status predsjednika i članova uprave, odnosno poslovodnog organa (direktor) riješen zaključivanjem ugovora o radu, odnosno posebnim ugovorom (član 27.)?"+
+"\n01.03.09. Da li je poslodavac radniku, uz pisani dokaz, dostavio fotokopiju prijave na obavezno osiguranje u roku od 15 dana od dana zaključivanja ugovora o radu, odnosno početka rada, kao i svake promjene osiguranja koja se tiče radnika ( Član 28.)?"+
+"\n01.03.10. Da li je poslodavac tražio od radnika podatke koji nisu u neposrednoj vezi sa radnim odnosom? (Član 29.)"+
+"\n01.03.11. Da li je poslodavac prikupljao, obrađivao, koristio ili dostavljao trećim licima lične podatke radnika? (Član 30.)"+
+"\n01.03.12. Da li je poslodavac zaključio ugovor o radu sa pripravnikom ili utvrdio plaću pripravniku suprotno članu 32. Zakona o radu?"+
+"\n01.04.01. Da li je poslodavac ugovor o stručnom osposobljavanju sa licem koje je završilo školovanje za takvo zanimanje zaključio u pisanoj formi i dostavio kopiju ugovora u roku od osam dana nadležnoj službi za zapošljavanje? (Član 34. )"+
+"\n01.05.01. Da li je poslodavac zaključio ugovor o radu u kojem je puno ili nepuno radno vrijeme ugovoreno suprotno članu 36. Zakona o radu?"+
+"\n01.05.02. Da li je poslodavac zaključio ugovor o radu sa maloljetnim radnikom na radno vrijeme duže od 35 sati sedmično?"+
+"\n01.05.03. Da li je poslodavac od radnika zahtijevao da na poslovima, na kojima se uz primjenu mjera sigurnosti i zdravlja na radu nije moguće zaštiti od štetnih uticaja, radi duže od skraćenog radnog vremena? (Član 37.)"+
+"\n01.05.04. Da li poslodavac od radnika zahtijeva da radi duže od punog radnog vremena (prekovremeni rad) suprotno članu 38. stav 1. Zakona o radu?"+
+"\n01.05.05. Da li je poslodavac o prekovremenom radu obavjestio nadležnu inspekciju rada? (Član 38. stav 2.)"+
+"\n01.05.06. Da li je poslodavac naredio prekovremeni rad maloljetnom radniku? ( Član 38. stav 3.)"+
+"\n01.05.07. Da li je poslodavac trudnici, majci, odnosno usvojitelju djeteta do tri godine života, kao i samohranom roditelju, samohranom usvojitelju i licu kojem je na osnovu rješenja nadležnog oragana dijete povjereno na čuvanje i odgoj, do šest godina života, naložio prekovremeni rad bez pismene izjave o dobrovoljnom pristanku na takav rad? (Član 38. stav 4.)"+
+"\n01.05.08. Da li je poslodavac izvršio preraspodjelu radnog vremena u skladu sa odredbom člana 39. stav 1., 2. i 3. Zakona o radu?"+
+"\n01.05.09. Da li je poslodavac trudnici, majci, odnosno usvojitelju djeteta do tri godine života, kao i samohranom roditelju, samohranom usvojitelju i licu kojem je na osnovu rješenja nadležnog oragana dijete povjereno na čuvanje i odgoj, do šest godina života naredio rad u preraspodjeli radnog vremena bez njihovog pisanog pristanka? ( Član 39. stav 5.)"+
+"\n01.05.10. Da li je poslodavac osigurao izmjenu smjena koje uključuju noćni rad u skladu sa članom 40. stav 2. Zakona o radu?"+
+"\n01.05.11. Da li je poslodavac obezbijedio posebnu zaštitu radnika koji rade noću u skladu sa odredbom član 41. stav 3. Zakona o radu?"+
+"\n01.05.12. Da li je poslodavac naredio noćni rad trudnici počev od šestog mjeseca trudnoće, majci i usvojitelju kao i licu kojem je na osnovu rješenja nadležnog organa dijete povjereno na čuvanje i odgoj i to do navršene dvije godine života djeteta? ( Član 41. stav 5.)"+
+"\n01.05.13. Da li je poslodavac maloljetnom radniku naredio da radi noću? ( Član 42 )"+
+"\n01.05.14. Da li poslodavac vodi propisane evidencije o radnicima i drugim licima angažovanim na radu na način utvrđen članom 43. stav 1.-3. Zakona o radu?"+
+"\n01.05.15. Da li je poslodavac predočio inspektoru rada na njegov zahtjev evidencije propisane odredbom člana članom 43. stav 1. i 3. Zakona o radu?"+
+"\n01.06.01. Da li je poslodavac radniku omogućio odmor u toku radnog dana? (Član 44.)"+
+"\n01.06.02. Da li je poslodavac radniku omogućio dnevni i sedmični odmor u skladu sa odredbama članova 45. i 46. Zakona o radu?"+
+"\n01.06.03. Da li je poslodavac uskratio radniku pravo na korištenje odmora u toku radnog dana, dnevnog i sedmičnog odmora? (član 46. stav 3.)"+
+"\n01.06.04. Da li je poslodavac radniku omogućio korištenje godišnjeg odmora u najkraćem trajanju određenom Zakonom o radu ? ( član 47. i 48. stav 2. )"+
+"\n01.06.05. Da li je poslodavac radniku uskratio pravo na godišnji odmor, odnosno isplatio naknadu umjesto korištenja godišnjeg odmora? (član 51. )"+
+"\n01.06.06. Da li je poslodavac radniku uskratio pravo na naknadu plaće za vrijeme korištenja godišnjeg odmora, odnosno nakandu umjesto korištenja godišnjeg odmora? (Član 52. stav 3. i 4.)"+
+"\n01.06.07, Da li je poslodavac radniku omogućio korištenje plaćenog odsustva? ( član 53.)"+
+"\n01.07.01. Da li je poslodavac prilikom stupanja radnika na rad omogućio radniku da se upozna sa propisima u vezi sa radnim odnosima i propisima u vezi sa sigurnošću i zdravljem na radu i da li ga je upoznao sa organizacijom rada? ( član 55. stav 1.)"+
+"\n01.07.02. Da li je poslodavac radniku uskratio pravo na naknadu plaće u slučaju kada odbije da radi zbog neposredne prijetnje opasnosti za život i zdravlje? (član 55. stav 4.)"+
+"\n01.07.03. Da li je poslodavac rasporedio maloljetnika na naročito teške fizičke poslove, radove pod zemljom ili pod vodom? ( Član 57. stav 1.)"+
+"\n01.07.04. Da li je poslodavac maloljetnom radniku osigurao pravo na ljekarski pregled najmanje jednom u dvije godine? ( član 58.)"+
+"\n01.07.05. Da li je žena zaposlena na poslovima pod zemljom (u rudnicima)? ( Član 59.)"+
+"\n01.07.06. Da li je poslodavac odbio da zaposli ženu zbog trudnoće? (član 60. stav 1. )"+
+"\n01.07.07. Da li je poslodavac ženi za vrijeme trudnoće, korištenja porođajnog odsustva ili za vrijeme korištenja prava iz člana 63., 64. i 65. Zakona o radu otkazao ugovor o radu, odnosno ženi/radniku koji koristi neko od tih prava? (član 60. stav 1.)"+
+"\n01.07.08. Da li je poslodavac tražio bilo kakve podatke o trudnoći, osim ako radnica to zahtijeva' (član 60. stav 3.)"+
+"\n01.07.09.. Da li je poslodavac ženi za vrijeme trudnoće, odnosno dojenja djeteta, obezbijedio ostvarivanje prava predviđenih članom 61. Zakona o radu?"+
+"\n01.07.10. Da li je poslodavac omogućio ženi, radniku-ocu dijeteta ili usvojiocu, odnosno licu kojem je na osnovu rješenja nadležnog organa dijete povjereno na čuvanje i odgoj da koristi porođajno odsustvo? ( član 62. )"+
+"\n01.07.11. Da li je poslodavac ženi, ocu dijeteta ili usvojiocu, odnosno licu kojem je dijete na osnovu rješenja nadležnog organa povjereno na čuvanje i odgoj omogućio da radi polovinu punog radnog vremena? ( član 63. i 64. )"+
+"\n01.07.12. Da li je poslodavac omogućio ženi da odsustvuje sa posla radi dojenja u skladu sa odredbom člana 65. Zakona o radu?"+
+"\n01.07.13. Da li je poslodavac jednom od roditelja dijeteta sa težim smetnjama u razvoju ili usvojiocu odnosno licu kojem je dijete povjereno na čuvanje i odgoj onemogućio da koristi prava iz člana 69. Zakona o radu?"+
+"\n01.07.14. Da li je poslodavac radniku koji je pretrpio povredu na radu ili je obolio od profesionalne bolesti, za vrijeme privremene spriječenosti za rad zbog liječenja ili oporavka otkazao ugovor o radu ili utvrdio prestanak ugovora o radu na određeno vrijeme? ( Član 71. )"+
+"\n01.07.15. Da li je poslodavac radnika nakon prestanka privremene spriječenosti za rad do šest mjeseci vratio na poslove na kojim je prije radio ili druge odgovarajuće poslove? (član 72. stav 2. )"+
+"\n01.07.16. Da li je poslodavac ponudio radniku sa promjenjenom radnom sposobnosti druge poslove? ( Član 73. )"+
+"\n01.07.17. Da li je poslodavac radniku sa promjenjenom radnom sposobnosti otkazao ugovor o radu suprotno član 74. Zakona o radu?"+
+"\n01.07.18. Da li je poslodavac radniku sa promjenjenom radnom sposobnosti isplatio otpremninu u skladu sa članom 74. stav 3. Zakona o radu?"+
+"\n01.08.01. Da li je poslodavac isplatio plaću radniku u periodima od najduže 30 dana nakon obavljenog rada? ( član 79.)"+
+"\n01.08.02. Da li je poslodavac isplatio radniku plaću i naknadu plaće u novcu i prilikom isplate uručio pismeni obračun plaće? (Član 79. stav 2. i 3. )"+
+"\n01.08.03. Da li je poslodavac uručio radniku obračun plaće koju je bio dužan isplatiti? (član 80. stav 1.)"+
+"\n01.08.04. Da li je poslodavac uskratio radniku pravo na povećanu platu u slučajevima iz člana 76. Zakona o radu ( "Sl.novine FBiH, broj 62/15")?"+
+"\n01.08.05. Da li je poslodavac radniku isplatio plaću manju od plaće utvrđene kolektivnim ugovorom i pravilnikom o radu? ( član 78. stav 4.)"+
+"\n01.08.06. Da li je poslodavac radniku isplatio naknadu plaće u skladu sa odredbom člana 81. Zakona o radu?"+
+"\n01.08.07. Da li je poslodavac svoje potraživanje prema radniku naplatio suprotno članu 82. Zakona o radu?"+
+"\n01.09.01. Da li je poslodavac radniku nadoknadio štetu u skladu sa odredbom člana 93. Zakona o radu?"+
+"\n01.10.01. Da li je poslodavac zaključio ugovor o radu sa drugim radnikom suprotno članu 96. stav 3. Zakona o radu?"+
+"\n01.10.02. Da li je poslodavac omogućio radniku da se izjasni o elementima odgovornosti koja mu se stavlja na teret? (Član 101.)"+
+"\n01.10.03. Da li je poslodavac uručio otkaz radniku u pisanoj formi i obrazložio ga? ( član 104.)"+
+"\n01.10.04. Da li je poslodavac ispunio obaveze prema radniku ukoliko radnik prestane sa radom prije isteka propisanog otkaznog roka? (član 106. stav 1.)"+
+"\n01.11.01. Da li je poslodavac rasporedio radnika suprotno odredbi člana 108. stav 1. Zakona o radu?"+
+"\n01.11.02. Da li je poslodavac obračunao radniku plaću i drugu naknadu suprotno odredbi člana 108. stav 2. Zakona o radu?"+
+"\n01.12.01. Da li se poslodavac koji zapošljava više od 30 radnika, a koji u periodu od tri mjeseca, ima namjeru da otkaže ugovor o radu najmanje petorici radnika, konsultirao sa vijećem zaposlenika i sindikatom? ( Član 109 )"+
+"\n01.12.02.. Da li je poslodavac proveo postupak konsultiranja u skladu sa odredbom člana 110. stav 1. i 2. Zakona o radu?"+
+"\n01.12.03. Da li je poslodavac zaključio ugovor o radu sa drugim radnicima suprotno članu 110. stav 3. Zakona o radu?"+
+"\n01.12.04. Da li je poslodavac uskratio radniku pravo na otpremninu? ( član 111. )"+
+"\n01.13.01. Da li je poslodavac-pravni prethodnik pisanim putem obavijestio radnika o prenošenju ugovora o radu na poslodavca pravnog sljednika? ( član 117. stav 3. )"+
+"\n01.13.02. Da li je u slučaju statusne promjene poslodavac-pravni sljednik pribavio pisanu saglasnost radnika o prenosu ugovora o radu i zadržao sva prava radnika iz radnog odnosa ( član 117. stav 1. i 2. )?"+
+"\n01.14.01. Da li je poslodavac koji zapošljava više od 30 radnika donio i objavio pravilnik o radu? ( Član 118.)"+
+"\n01.15.01. Da li je poslodavac stavio u nepovoljniji položaj radnika zbog organiziranja i sudjelovanja u štrajku? ( član 157. stav 1. )"+
+"\n01.16.01. Da li je poslodavac izvršio povrat radne knjižice? ( Član 164. stav 2. i član 176. stav 2. )"+
+"\n01.17.01. Da li je ugovor o obavljanju privremenih i povremenih poslova zaključen pod uvjetima propisanim odredbom člana 166. Zakona o radu?"+
+"\n01.17.02. Da li je ugovor o obavljanju privremenih i povremenih poslova zaključen na način koji je predviđen odredbom člana 167. Zakona o radu?"+
+"\n01.17.03. Da li je ugovor o obavljanju privremenih i povremenih poslova zaključen sa studentom shodno članu 166.a?"+
+"\n01.18.01. Da li je poslodavac u roku od 6 mjeseci od dana stupanja na snagu Zakona o radu uskladio pravilnik o radu ( član 177. )?"+
+"\n01.18.02. Da li je poslodavac u roku od tri mjeseca od dana stupanja na snagu Zakona o radu ponudio radniku zaključivanje ugovora o radu usklađenog sa zakonom? ( član 178.)"+
+"\n01.19.01. Da li je poslodavac-pravno lice ponovio prekršaj iz člana 170. stav 1. i 3. i člana 171. stav 1. Zakona o radu?"+
+"\n01.19.02. Da li je poslodavac učinio prekršaj iz člana 171. stav 1. prema maloljetniku?"+
+"\n01.19.03. Da li je poslodavac ponovio prekršaj iz člana 171. stav 1. prema maloljetniku?"+
+"\n%"+
+"\nZAKON O ZAPOŠLJAVANJU STRANACA"+
+"\n="+
+"\n02.01.01. Da li je poslodavac zaposlio stranca bez radne dozvole? ( član 7. )"+
+"\n02.02.01. Da li je poslodavac sa strancem zaključio ugovor o radu ili ugovor o obavljanju privremenih i povremenih poslova u skladu sa članom 2. Zakona o zapošljavanju stranaca?"+
+"\n02.03.01. Da li je poslodavac stranca rasporedio na radno mjesto ili vrstu poslova u skladu sa izdatom radnom dozvolom? (Član 12. stav 1.)"+
+"\n02.03.02. Da li je poslodavac radnu dozvolu izdatu strancu prenio na drugog poslodavca? ( član 12. stav 2.)"+
+"\n02.03.03. Da li je poslodavac strancu produžio rad nakon prestanka važenja radne dozvole? (član 13. stav 2.)"+
+"\n%"+
+"\nZAKON O ŠTRAJKU"+
+"\n="+
+"\n03.01.01. Da li je sindikat organizirao štrajk u skladu sa odredbom člana 4. Zakona o štrajku?"+
+"\n03.01.02. Da li je sindikat najkasnije na dan najave štrajka objavio sporazum o poslovima na kojima se rad ne može prekidati? (član 5. stav 8.)"+
+"\n03.01.03. Da li je štrajk započet prije okončanja postupka mirenja predviđenog u Zakonu o radu, odnosno prije provođenja drugog načina mirnog rješavanja spora o kojem su se strane sporazumijele? (član 6. stav 1.)"+
+"\n03.01.04. Da li je poslodavac zaposlenicima omogućio obavljanje poslova koji se ne mogu prekidati za vrijeme štrajka?"+
+"\n03.01.05. Da li je poslodavac poduzeo isključenje zaposlenika koji ne sudjeluju u štrajku u skladu sa odredbom člana 7. stav 1. Zakona o štrajku?"+
+"\n03.01.06. Da li je poslodavac započeo isključivanje zaposlenika iz procesa rada prije utvrđenog roka iz člana 7. stav 2. Zakona o štrajku?"+
+"\n03.01.07. Da li je poslodavac isključio iz procesa rada zaposlenike u broju koji je veći od polovine broja zaposlenika u štrajku?"+
+"\n03.01.08. Da li je poslodavac za zaposlenike iz procesa rada uplatio doprinose za socijalno osiguranje utvrđene zakonom, na osnovicu koju čini najniža plaća?"+
+"\n03.01.09. Da li je poslodavac u toku štrajka organiziranog pod uvjetima i način utvrđen Zakonom o štrajku, kolektivnim ugovorom i pravima sindikata o štrajku zaposlio nove zaposlenike koji bi zamijenili učesnike u štrajku?"+
+"\n%"+
+"\nZAKON O VIJEĆU UPOSLENIKA"+
+"\n="+
+"\n04.01.01. Da li je poslodavac omogućio uposlenicima da učestvuju u odlučivanju o pitanjima u vezi s njihovim ekonomskim i socijalnim pravima i interesima na način i pod uvjetima propisanim Zakonom o vijeću uposlenika? (član 2.)"+
+"\n04.01.02. Da li je poslodavac, najmanje svakih šest mjeseci, informirao vijeće uposlenika o pitanjima koja utiču na njihove interese iz radnog odnosa, a naročito na stanje i rezultate poslovanja, razvojne planove i njihov utjecaj na ekonomski i socijalni položaj uposlenika, kretanje i promjene u plaćama, zaštitu na radu i mjere za poboljšanje uvjeta rada i druga pitanja važna za prava i interese uposlenika iz radnog odnosa?"+
+"\n04.01.03. Da li se poslodavac prije donošenja odluke značajne za prava i interese uposlenika konzultirao sa vijećem zaposlenika o namjeravanoj odluci?"+
+"\n04.01.04. Da li je poslodavac pri donošenju odluke o pravima iz člana 26. Zakona o vijeću uposlenika pribavio prethodnu saglasnost vijeća uposlenika?"+
+"\n04.01.05. Da li je poslodavac vijeću uposlenika stavio na uvid dokumentaciju u pogledu ispunjavanja obaveze uplate doprinosa za penzijsko i invalidsko i zdravstveno osiguranje i isiguranje od nezaposlenosti? (član 28 stav 2.)"+
+"\n04.01.06. Da li je poslodavac članovima vijeća uposlenika isplatio naknade plaća za rad u vijeću uposlenika i to najamanje u visini plaće koju bi ostvarili da su radili na poslovima za su zaključili ugovore o radu?"+
+"\n04.01.07. Da li je poslodavac predsjednika ili člana vijeća uposlenika koji je poslove za vijeće uposlenika obavljao u punom radnom vremenu, nakon prestanka tih poslova vratio na poslove na kojim je prethodno radio, a ako tih poslova nema, na druge poslove koji odgovaraju njegovoj stručnoj spremi? (član 35.)"+
+"\n04.01.08. Da li je poslodavac u skladu sa odredbom člana 36. Zakona o vijeću uposlenika osigurao vijeću uposlenika potreban prostor, administartivne i tehničke uvjete za rad?"+
+"\n%"+
+"\nZAKON O POSREDOVANJU U ZAPOŠLJAVANJU I SOCIJALNOJ SIGURNOSTI NEZAPOSLENIH OSOBA"+
+"\n="+
+"\n05.01.01. Da li je pravna osoba nekoga stavila u nepovoljan položaj zbog: rase, boje kože, spola, jezika, vjere, političkog ili drugog mišljenja, nacionalnog ili socijalnog porijekla, imovnog stanja, rođenja ili kakve druge okolnosti, članstva ili nečlanstva u političkoj stranci, ili članstva ili nečlanstva u sindikatu, ili tjelesnih i duševnih poteškoća? (Član 2)"+
+"\n05.02.01 Da li pravna osoba obavlja poslove posredovanja u zapošljavanju suprotno odredbi člana 26. Zakona o posredovanju u zapošljavanju i socijalnoj sigurnosti nezaposlenih osoba?"+
+"\n%"+
+"\nZAKON O PENZIJSKOM I INVALIDSKOM OSIGURANJU"+
+"\n="+
+"\n06.01.01. Da li je poslodavac, odnosno drugo pravno lice omogućio korištenje prava licu kojem ne pripada pravo prema odredbama Zakona o penzijskom i invalidsko osiguranju ili drugim propisima o penzijskom i invalidskom osiguranju ili mu ne pripada u tom obimu?"+
+"\n06.01.01. Da li je poslodavac, odnosno drugo pravno lice osiguraniku, suprotno odredbama Zakona uskartio ili ograničio prava koja mu pripadaju?"+
+"\n%"+
+"\nUREDBE O POTICANJU ZAPOŠLJAVANJA"+
+"\n="+
+"\n09.01.01 Da li radni odnos radnika koji se zapošljavaju i osoba koje se same zapošljavaju uz subvencioniranje traje koliko i period za koji se osigurava subvencija i još najmanje isti period nakon isteka tog roka te da li je poslodavac izvršio isplatu netto plaće na način i u propisanim rokovima? ( član 10. Uredbe o poticanju zapošljavanja „ Službene novine F BiH „ br. 95/15; 32/16 i 48/16 )."+
+"\n%"+
+"\nUREDBA O UVJETIMA KOJE JE PODUZEĆE ODNOSNO DRUGA PRAVNA OSOBA DUZNA ISPUNJAVATI GLEDE BROJA UPOSLENIH DJELATNIKA U SVEZI OBAVLJANJA REGISTRIRANE DJELATNOSTI"+
+"\n="+
+"\n08.01.01. Da li poduzeće odnosno druga pravna osoba koja obavlja djelatnost za koju je registrirana ispunjava uvjete u pogledu najmanjeg broja zaposlenika iz člana 3. Uredbe o uvjetima koje je poduzeće odnosno druga pravna osoba dužna ispunjavati glede broja uposlenih djelatnika u svezi obavljanja registrirane djelatnosti?"+
+"\n%"

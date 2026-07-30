@@ -1,0 +1,257 @@
+"\nstatus|||OPĆE ODREDBE|"+
+"\n|||oznaka odgovora|"+
+"\nstatus|5|kod 00.01.00|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nstatus|5|kod 00.01.01|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nstatus|5|kod 00.01.02|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nstatus|4|kod 00.01.03|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.04|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.05|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\nstatus|4|kod 00.01.06|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.07|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.08|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.09|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.10|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.11|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.12|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|4|kod 00.01.13|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nstatus|5|kod 00.02.01|Obavljanje djelatnosti bez odgovarajuće registracije|Pribaviti rješenje o registraciji/upisu prije nastavka rada"+
+"\nstatus|5|kod 00.02.02|Obavljanje djelatnosti bez odgovarajuće registracije|Pribaviti rješenje o registraciji/upisu prije nastavka rada"+
+"\nstatus|3|kod 00.02.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nstatus|3|kod 00.02.04|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nstatus|4|kod 00.02.05|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\n|||kraj bloka|"+
+"\n|99. FISKALIZACIJA|"+
+"\n|||oznaka odgovora|"+
+"\nregistracija|4|kod 02.01.03|Nepoštivanje propisa o fiskalizaciji|Osigurati ispravan fiskalni sistem i izdavanje računa"+
+"\nregistracija|4|kod 09.01.01|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 99.01.02|Nepoštivanje propisa o fiskalizaciji|Osigurati ispravan fiskalni sistem i izdavanje računa"+
+"\nregistracija|4|kod 99.02.01|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 99.02.02|Nepoštivanje propisa o fiskalizaciji|Osigurati ispravan fiskalni sistem i izdavanje računa"+
+"\nregistracija|4|kod 99.02.03|Nepoštivanje propisa o fiskalizaciji|Osigurati ispravan fiskalni sistem i izdavanje računa"+
+"\nregistracija|5|kod 00.01.00|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nregistracija|5|kod 00.01.01|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nregistracija|5|kod 00.01.02|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nregistracija|4|kod 00.01.03|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.04|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.05|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\nregistracija|4|kod 00.01.06|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.07|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.08|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.09|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.10|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.11|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.12|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 00.01.13|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|5|kod 00.02.01|Obavljanje djelatnosti bez odgovarajuće registracije|Pribaviti rješenje o registraciji/upisu prije nastavka rada"+
+"\nregistracija|5|kod 00.02.02|Obavljanje djelatnosti bez odgovarajuće registracije|Pribaviti rješenje o registraciji/upisu prije nastavka rada"+
+"\nregistracija|3|kod 00.02.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 00.02.04|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|4|kod 00.02.05|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 01.01.01|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nregistracija|3|kod 01.01.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|4|član 24|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nregistracija|4|član 32|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nregistracija|3|član 43|Neuredne ili nepotpune evidencije o radnicima|Voditi uredne evidencije o svim radnicima i radnom vremenu"+
+"\nregistracija|3|član 47|Uskraćivanje prava na odmor|Osigurati zakonski minimum odmora i godišnjeg odsustva"+
+"\nregistracija|5|član 79|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nregistracija|5|član 78 stav 4|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nregistracija|5|član 80|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nregistracija|5|kod 01.01.01|Obavljanje djelatnosti bez odgovarajuće registracije|Pribaviti rješenje o registraciji/upisu prije nastavka rada"+
+"\nregistracija|3|kod 02.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 02.02.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 02.03.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 03.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|4|kod 03.01.02|Kršenje prava iz penzijsko-invalidskog osiguranja|Osigurati sve doprinose i prava iz PIO"+
+"\nregistracija|4|kod 03.02.01|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\nregistracija|4|kod 03.03.01|Nezakoniti noćni rad ili nedostatak zaštite|Osigurati izmjenu smjena i posebnu zaštitu noćnih radnika"+
+"\nregistracija|4|kod 03.04.01|Nezakoniti noćni rad ili nedostatak zaštite|Osigurati izmjenu smjena i posebnu zaštitu noćnih radnika"+
+"\nregistracija|3|kod 04.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.01.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.04|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.05|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.06|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.07|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 04.02.08|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 05.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 05.01.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|član 40|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 06.02.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 06.02.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 06.02.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 07.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 07.01.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 07.01.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 08.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 08.02.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 09.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 09.02.01|Ometanje sindikalnog organiziranja|Omogućiti slobodno sindikalno udruživanje i djelovanje"+
+"\nregistracija|3|kod 09.02.02|Ometanje sindikalnog organiziranja|Omogućiti slobodno sindikalno udruživanje i djelovanje"+
+"\nregistracija|3|kod 09.02.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 09.02.04|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 10.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 10.01.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|član 10 stav 1|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.03.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.03.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.04.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.05.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.06.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.07.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.08.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 11.08.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 12.01.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 12.01.02|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|3|kod 12.02.01|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nregistracija|4|kod 13.01.01|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 13.01.02|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 13.01.03|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 13.01.04|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 13.01.05|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 14.01.01|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\nregistracija|4|kod 14.01.02|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\nregistracija|4|kod 14.01.03|Neusklađenost s nalozima inspekcijskog nadzora|Postupiti po rješenju inspektora u naloženom roku"+
+"\n|||kraj bloka|"+
+"\n|01. ZAKON O RADU|"+
+"\n|||oznaka odgovora|"+
+"\nradni odnosi|4|član 4|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|5|kod 01.02.01|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nradni odnosi|3|član 15. stav 2|Ometanje sindikalnog organiziranja|Omogućiti slobodno sindikalno udruživanje i djelovanje"+
+"\nradni odnosi|3|član 18|Ometanje sindikalnog organiziranja|Omogućiti slobodno sindikalno udruživanje i djelovanje"+
+"\nradni odnosi|5|član 20. stav 1|Kršenje prava maloljetnih radnika|Prekinuti angažman maloljetnika koji nije u skladu sa zakonom"+
+"\nradni odnosi|5|član 20 stav 2|Kršenje prava maloljetnih radnika|Prekinuti angažman maloljetnika koji nije u skladu sa zakonom"+
+"\nradni odnosi|4|član 24. stav 1|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 24|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|kod 01.03.05|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|član 26. stav 2|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 26.stav 3|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 27|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 28|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|član 29|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 30|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|5|kod 01.03.12|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|3|član 34|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|kod 01.05.01|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|kod 01.05.02|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 37|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\nradni odnosi|4|kod 01.05.04|Nezakoniti prekovremeni rad bez obavijesti inspektoru|Prijaviti prekovremeni rad inspekciji i isplatiti dodatatak"+
+"\nradni odnosi|4|član 38. stav 2|Nezakoniti prekovremeni rad bez obavijesti inspektoru|Prijaviti prekovremeni rad inspekciji i isplatiti dodatatak"+
+"\nradni odnosi|4|član 38. stav 3|Nezakoniti prekovremeni rad bez obavijesti inspektoru|Prijaviti prekovremeni rad inspekciji i isplatiti dodatatak"+
+"\nradni odnosi|5|član 38. stav 4|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|3|član 39. stav 1|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|5|član 39. stav 5|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|4|kod 01.05.10|Nezakoniti noćni rad ili nedostatak zaštite|Osigurati izmjenu smjena i posebnu zaštitu noćnih radnika"+
+"\nradni odnosi|4|član 41. stav 3|Nezakoniti noćni rad ili nedostatak zaštite|Osigurati izmjenu smjena i posebnu zaštitu noćnih radnika"+
+"\nradni odnosi|5|član 41. stav 5|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|4|član 42|Nezakoniti noćni rad ili nedostatak zaštite|Osigurati izmjenu smjena i posebnu zaštitu noćnih radnika"+
+"\nradni odnosi|3|kod 01.05.14|Neuredne ili nepotpune evidencije o radnicima|Voditi uredne evidencije o svim radnicima i radnom vremenu"+
+"\nradni odnosi|3|kod 01.05.15|Neuredne ili nepotpune evidencije o radnicima|Voditi uredne evidencije o svim radnicima i radnom vremenu"+
+"\nradni odnosi|3|član 44|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|kod 01.06.02|Uskraćivanje prava na odmor|Osigurati zakonski minimum odmora i godišnjeg odsustva"+
+"\nradni odnosi|3|član 46. stav 3|Uskraćivanje prava na odmor|Osigurati zakonski minimum odmora i godišnjeg odsustva"+
+"\nradni odnosi|3|član 47|Uskraćivanje prava na odmor|Osigurati zakonski minimum odmora i godišnjeg odsustva"+
+"\nradni odnosi|5|član 51|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 52. stav 3|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 53|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|4|član 55. stav 1|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\nradni odnosi|5|član 55. stav 4|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 57. stav 1|Kršenje prava maloljetnih radnika|Prekinuti angažman maloljetnika koji nije u skladu sa zakonom"+
+"\nradni odnosi|3|član 58|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 59|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 60. stav 1|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|5|član 63|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|3|član 60. stav 3|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|5|kod 01.07.09|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|5|član 62|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|5|član 63|Obavljanje djelatnosti bez odgovarajuće registracije|Pribaviti rješenje o registraciji/upisu prije nastavka rada"+
+"\nradni odnosi|5|član 65|Kršenje prava trudnica i majki|Osigurati sva zakonska prava trudnicama i majkama"+
+"\nradni odnosi|5|član 69|Ometanje inspekcijskog nadzora - teška povreda|Odmah omogućiti pristup inspektoru i dostaviti dokumentaciju"+
+"\nradni odnosi|4|član 71|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|član 72. stav 2|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 73|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|član 74|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|5|kod 01.07.18|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 79|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 79. stav 2|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 80. stav 1|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 76|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 78. stav 4|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|5|član 81|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|3|kod 01.08.07|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 93|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|kod 01.10.01|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|član 101|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|član 104|Nezakoniti otkaz ugovora o radu|Poštovati proceduru i zakonske razloge za otkaz ugovora"+
+"\nradni odnosi|4|član 106. stav 1|Nezakoniti otkaz ugovora o radu|Poštovati proceduru i zakonske razloge za otkaz ugovora"+
+"\nradni odnosi|3|član 108. stav 1|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|5|član 108. stav 2|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|4|član 109|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|član 110. stav 1|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|kod 01.12.03|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 111|Neisplata otpremnine pri prestanku radnog odnosa|Isplatiti otpremninu u zakonski propisanom iznosu"+
+"\nradni odnosi|4|član 117. stav 3|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|4|član 117. stav 1|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|član 118|Nedostatak ili neusklađenost pravilnika o radu|Donijeti/ažurirati pravilnik o radu u skladu sa zakonom"+
+"\nradni odnosi|3|član 157. stav 1|Nezakonito postupanje u slučaju štrajka|Postupati sukladno Zakonu o štrajku i kolektivnom ugovoru"+
+"\nradni odnosi|3|član 164. stav 2|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 166|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 167|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|kod 01.17.03|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 177|Nedostatak ili neusklađenost pravilnika o radu|Donijeti/ažurirati pravilnik o radu u skladu sa zakonom"+
+"\nradni odnosi|4|član 178|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|3|član 170. stav 1|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|5|član 171. stav 1|Kršenje prava maloljetnih radnika|Prekinuti angažman maloljetnika koji nije u skladu sa zakonom"+
+"\nradni odnosi|5|član 171. stav 1|Kršenje prava maloljetnih radnika|Prekinuti angažman maloljetnika koji nije u skladu sa zakonom"+
+"\n|||kraj bloka|"+
+"\n|02. ZAKON O ZAPOŠLJAVANJU STRANACA|"+
+"\n|||oznaka odgovora|"+
+"\nradni odnosi|5|član 7|Zapošljavanje stranca bez radne dozvole|Pribaviti radnu dozvolu za svakog stranog radnika"+
+"\nradni odnosi|4|kod 02.02.01|Nedostatak ili neispravnost ugovora o radu|Zaključiti ugovor o radu u pisanoj formi sa svim zakonskim elementima"+
+"\nradni odnosi|5|član 12. stav 1|Zapošljavanje stranca bez radne dozvole|Pribaviti radnu dozvolu za svakog stranog radnika"+
+"\nradni odnosi|3|član 12. stav 2|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|član 13. stav 2|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\n|||kraj bloka|"+
+"\nZAKON O ŠTRAJKU"+
+"\n="+
+"\n03.01.01. Da li je sindikat organizirao štrajk u skladu sa odredbom člana 4. Zakona o štrajku?"+
+"\n03.01.02. Da li je sindikat najkasnije na dan najave štrajka objavio sporazum o poslovima na kojima se rad ne može prekidati? (član 5. stav 8.)"+
+"\n03.01.03. Da li je štrajk započet prije okončanja postupka mirenja predviđenog u Zakonu o radu, odnosno prije provođenja drugog načina mirnog rješavanja spora o kojem su se strane sporazumijele? (član 6. stav 1.)"+
+"\n03.01.04. Da li je poslodavac zaposlenicima omogućio obavljanje poslova koji se ne mogu prekidati za vrijeme štrajka?"+
+"\n03.01.05. Da li je poslodavac poduzeo isključenje zaposlenika koji ne sudjeluju u štrajku u skladu sa odredbom člana 7. stav 1. Zakona o štrajku?"+
+"\n03.01.06. Da li je poslodavac započeo isključivanje zaposlenika iz procesa rada prije utvrđenog roka iz člana 7. stav 2. Zakona o štrajku?"+
+"\n03.01.07. Da li je poslodavac isključio iz procesa rada zaposlenike u broju koji je veći od polovine broja zaposlenika u štrajku?"+
+"\n03.01.08. Da li je poslodavac za zaposlenike iz procesa rada uplatio doprinose za socijalno osiguranje utvrđene zakonom, na osnovicu koju čini najniža plaća?"+
+"\n03.01.09. Da li je poslodavac u toku štrajka organiziranog pod uvjetima i način utvrđen Zakonom o štrajku, kolektivnim ugovorom i pravima sindikata o štrajku zaposlio nove zaposlenike koji bi zamijenili učesnike u štrajku?"+
+"\n%"+
+"\n|04. ZAKON O VIJEĆU UPOSLENIKA|"+
+"\n|||oznaka odgovora|"+
+"\nradni odnosi|3|član 2|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|3|kod 04.01.02|Ometanje rada vijeća uposlenika|Redovito informirati i konzultirati vijeće uposlenika"+
+"\nradni odnosi|3|kod 04.01.03|Ometanje rada vijeća uposlenika|Redovito informirati i konzultirati vijeće uposlenika"+
+"\nradni odnosi|3|član 26|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\nradni odnosi|4|član 28 stav 2|Kršenje prava iz penzijsko-invalidskog osiguranja|Osigurati sve doprinose i prava iz PIO"+
+"\nradni odnosi|5|kod 04.01.06|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\nradni odnosi|3|član 35|Ometanje rada vijeća uposlenika|Redovito informirati i konzultirati vijeće uposlenika"+
+"\nradni odnosi|3|član 36|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\n|||kraj bloka|"+
+"\n|05. ZAKON O POSREDOVANJU U ZAPOŠLJAVANJU I SOCIJALNOJ SIGURNOSTI NEZAPOSLENIH OSOBA|"+
+"\n|||oznaka odgovora|"+
+"\nradni odnosi|3|član 2|Ometanje sindikalnog organiziranja|Omogućiti slobodno sindikalno udruživanje i djelovanje"+
+"\nradni odnosi|4|član 26|Propusti u zaštiti i sigurnosti na radu|Implementirati propisane mjere zaštite i sigurnosti na radu"+
+"\n|||kraj bloka|"+
+"\n|06. ZAKON O PENZIJSKOM I INVALIDSKOM OSIGURANJU|"+
+"\n|||oznaka odgovora|"+
+"\nfinansije|4|kod 06.01.01|Kršenje prava iz penzijsko-invalidskog osiguranja|Osigurati sve doprinose i prava iz PIO"+
+"\nfinansije|4|kod 06.01.01|Kršenje prava iz penzijsko-invalidskog osiguranja|Osigurati sve doprinose i prava iz PIO"+
+"\n|||kraj bloka|"+
+"\n|09. UREDBE O POTICANJU ZAPOŠLJAVANJA|"+
+"\n|||oznaka odgovora|"+
+"\nfinansije|5|član 10|Neisplata ili nezakonita isplata plaće|Isplatiti sve dugujuće plaće i obračune u zakonskom roku"+
+"\n|||kraj bloka|"+
+"\n|08. UREDBA O UVJETIMA KOJE JE PODUZEĆE ODNOSNO DRUGA PRAVNA OSOBA DUZN|"+
+"\n|||oznaka odgovora|"+
+"\ninterni akti|3|član 3|Potencijalna povreda radnopravnih propisa|Provjeriti usklađenost sa važećim zakonskim propisima"+
+"\n|||kraj bloka|"

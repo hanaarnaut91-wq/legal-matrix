@@ -1,10 +1,13 @@
-using UnityEngine;
+using System.Collections.Generic;
 using TMPro;
-using System.Collections.Generic; // Required for Lists
+using UnityEngine;
 
 public class OdgovaranjeScript : MonoBehaviour
 {
-    string ImegrupeZakona = "";
+    private string imeGrupeZakona = string.Empty;
+
+    [SerializeField]
+    private int izabraniZakonIndex = -1;
 
     public TMP_Text ImegrupeZakonaText;
     public TMP_Text specifikacijeText;
@@ -13,117 +16,227 @@ public class OdgovaranjeScript : MonoBehaviour
     public SelekcijaGrupeZakonaMaker sgm;
 
     public List<string> pitanjaGrupe = new List<string>();
-    public int brojOdgovorenihPitanja = 0;
+    public int brojOdgovorenihPitanja;
     public GameObject pitanjePrefab;
     public Transform ContentTransform;
 
-    public void IzaberiGrupu(string imeGrupeNaKojojJeDugme)
+    public int IzabraniZakonIndex
     {
-        ImegrupeZakona = imeGrupeNaKojojJeDugme;
-        ImegrupeZakonaText.text = ImegrupeZakona;
+        get { return izabraniZakonIndex; }
+    }
+
+    private void Awake()
+    {
+        if (sgm == null)
+            sgm = FindObjectOfType<SelekcijaGrupeZakonaMaker>();
+    }
+
+    // Preferred method. GrupaZakonaChecker calls this with its exact block index.
+    public void IzaberiGrupuPoIndeksu(int zakonIndex)
+    {
+        if (!IsValidLawIndex(zakonIndex))
+        {
+            Debug.LogError("Neispravan indeks zakonske grupe: " + zakonIndex);
+            return;
+        }
+
+        izabraniZakonIndex = zakonIndex;
+        imeGrupeZakona = sgm.LawBlocks[zakonIndex].LawName;
+
+        if (ImegrupeZakonaText != null)
+            ImegrupeZakonaText.text = imeGrupeZakona;
+
         ListajPitanja();
         UpdateNaSpecifikaciju();
     }
 
+    // Compatibility method for old Unity button bindings.
+    // It is safe only when the law name occurs exactly once.
+    public void IzaberiGrupu(string imeGrupeNaKojojJeDugme)
+    {
+        if (sgm == null)
+        {
+            Debug.LogError("SGM referenca nije postavljena.");
+            return;
+        }
+
+        int foundIndex = -1;
+        int matches = 0;
+
+        for (int i = 0; i < sgm.LawBlocks.Count; i++)
+        {
+            if (sgm.LawBlocks[i].LawName == imeGrupeNaKojojJeDugme)
+            {
+                foundIndex = i;
+                matches++;
+            }
+        }
+
+        if (matches == 0)
+        {
+            Debug.LogError(
+                "Zakonska grupa nije pronađena: " +
+                imeGrupeNaKojojJeDugme);
+            return;
+        }
+
+        if (matches > 1)
+        {
+            Debug.LogError(
+                "Naziv zakona se pojavljuje više puta: '" +
+                imeGrupeNaKojojJeDugme +
+                "'. Koristi IzaberiGrupuPoIndeksu preko " +
+                "GrupaZakonaChecker.IzaberiOvuGrupu().");
+            return;
+        }
+
+        IzaberiGrupuPoIndeksu(foundIndex);
+    }
+
     public void ListajPitanja()
     {
-        int j = 0;
+        ClearQuestionObjects();
 
-        //nadji zakon
-        for (int i = 0; i < sgm.lines.Length; i++)
+        pitanjaGrupe.Clear();
+        brojOdgovorenihPitanja = 0;
+
+        if (!IsValidLawIndex(izabraniZakonIndex))
+            return;
+
+        if (pitanjePrefab == null || ContentTransform == null)
         {
-            if (sgm.lines[i] == ImegrupeZakona)
-            {
-                j = i + 2;
-            }
+            Debug.LogError(
+                "pitanjePrefab ili ContentTransform nisu postavljeni.");
+            return;
         }
 
-        Debug.Log("Zakon nadjen na mjestu " + j.ToString());
+        LegalMatrixLawBlock block =
+            sgm.LawBlocks[izabraniZakonIndex];
 
-        //nadji sva pitanja uz zakon
-        while (sgm.lines[j].Trim() != "%")
+        for (int i = 0; i < block.Questions.Count; i++)
         {
-            Debug.Log(j.ToString());
-            pitanjaGrupe.Add(sgm.lines[j]);
-            j++;
-        }
+            LegalMatrixQuestion record = block.Questions[i];
 
-        //reset index
-        j = 0;
+            pitanjaGrupe.Add(record.Text);
 
-        //set up pitanja (ako je odgovoreno nece stavljat "da/ne"//
-        for(int i = 0; i < pitanjaGrupe.Count; i++)
-        {
-            //preconfig
-            bool odgovoreno = false;
-            if (pitanjaGrupe[i].Contains("#") || pitanjaGrupe[i].Contains("@"))
-            {
-                odgovoreno = true;
+            if (record.Answer != LegalMatrixAnswer.Unanswered)
                 brojOdgovorenihPitanja++;
-            }
-            // -----------------------------------
-            GameObject p = Instantiate(pitanjePrefab, transform.position, Quaternion.identity);
-            p.transform.SetParent(ContentTransform);
-            p.transform.localScale = new Vector3(1.190039f, 1.190039f, 1.190039f);
-            //dodijeli pitanje
-            p.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().text = pitanjaGrupe[i];
-            // ovo ako je odgovoreno pitanje
-            if (odgovoreno == true)
+
+            GameObject questionObject =
+                Instantiate(pitanjePrefab, ContentTransform);
+
+            questionObject.transform.localScale =
+                new Vector3(1.190039f, 1.190039f, 1.190039f);
+
+            PitanjeScript pitanjeScript =
+                questionObject.GetComponent<PitanjeScript>();
+
+            if (pitanjeScript == null)
             {
-                p.gameObject.GetComponent<PitanjeScript>().UgasiOdgovore();
-                odgovoreno = false;
+                Debug.LogError(
+                    "Prefab pitanja nema PitanjeScript komponentu.");
+                Destroy(questionObject);
+                continue;
             }
+
+            // This is the critical fix: the exact file-line index is supplied.
+            pitanjeScript.Initialize(
+                this,
+                record.SourceLineIndex,
+                record.Text);
+
+            if (record.Answer != LegalMatrixAnswer.Unanswered)
+                pitanjeScript.UgasiOdgovore();
+            else
+                pitanjeScript.PrikaziOdgovore();
         }
     }
 
-    //float percent = (4f / 97f) * 100f; procenat
     public void UpdateNaSpecifikaciju()
     {
-        int j = 0;
         brojOdgovorenihPitanja = 0;
         pitanjaGrupe.Clear();
-        //nadji zakon
-        for (int i = 0; i < sgm.lines.Length; i++)
+
+        if (!IsValidLawIndex(izabraniZakonIndex))
         {
-            if (sgm.lines[i] == ImegrupeZakona)
-            {
-                j = i + 2;
-            }
+            SetSpecificationText(0, 0);
+            return;
         }
 
-        //nadji sva pitanja uz zakon
-        while (sgm.lines[j].Trim() != "%")
-        {
-            Debug.Log(j.ToString());
-            pitanjaGrupe.Add(sgm.lines[j]);
-            j++;
-        }
+        LegalMatrixLawBlock block =
+            sgm.LawBlocks[izabraniZakonIndex];
 
-        //reset index
-        j = 0;
-
-        //set up pitanja (ako je odgovoreno nece stavljat "da/ne"//
-        for (int i = 0; i < pitanjaGrupe.Count; i++)
+        for (int i = 0; i < block.Questions.Count; i++)
         {
-            //preconfig
-            if (pitanjaGrupe[i].Contains("#") || pitanjaGrupe[i].Contains("@"))
-            {
+            LegalMatrixQuestion question = block.Questions[i];
+
+            pitanjaGrupe.Add(question.Text);
+
+            if (question.Answer != LegalMatrixAnswer.Unanswered)
                 brojOdgovorenihPitanja++;
-            }
         }
-        specifikacijeText.text = "Broj pitanja : " + pitanjaGrupe.Count.ToString() + " · Odgovoreno : " + brojOdgovorenihPitanja;
-        float procenat = 0;
-        procenat = (float)brojOdgovorenihPitanja / (float)pitanjaGrupe.Count * 100f;
-        procenatText.text = Mathf.Floor(procenat).ToString() + "%";
-    }   
+
+        SetSpecificationText(
+            block.Questions.Count,
+            brojOdgovorenihPitanja);
+    }
+
+    private void SetSpecificationText(int total, int answered)
+    {
+        if (specifikacijeText != null)
+        {
+            specifikacijeText.text =
+                "Broj pitanja: " + total +
+                " · Odgovoreno: " + answered;
+        }
+
+        float percent = total > 0
+            ? (float)answered / total * 100f
+            : 0f;
+
+        if (procenatText != null)
+            procenatText.text = Mathf.Floor(percent) + "%";
+    }
+
+    public void RefreshCurrentGroup()
+    {
+        if (!IsValidLawIndex(izabraniZakonIndex))
+            return;
+
+        ListajPitanja();
+        UpdateNaSpecifikaciju();
+    }
 
     public void Resetuj()
     {
         brojOdgovorenihPitanja = 0;
         pitanjaGrupe.Clear();
-        for (int i = 0; i < ContentTransform.childCount; i++)
+        ClearQuestionObjects();
+
+        izabraniZakonIndex = -1;
+        imeGrupeZakona = string.Empty;
+
+        if (ImegrupeZakonaText != null)
+            ImegrupeZakonaText.text = string.Empty;
+
+        SetSpecificationText(0, 0);
+    }
+
+    private void ClearQuestionObjects()
+    {
+        if (ContentTransform == null)
+            return;
+
+        for (int i = ContentTransform.childCount - 1; i >= 0; i--)
         {
             Destroy(ContentTransform.GetChild(i).gameObject);
         }
+    }
+
+    private bool IsValidLawIndex(int index)
+    {
+        return sgm != null &&
+               index >= 0 &&
+               index < sgm.LawBlocks.Count;
     }
 }

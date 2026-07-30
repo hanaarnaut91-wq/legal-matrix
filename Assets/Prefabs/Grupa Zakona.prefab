@@ -69,9 +69,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sgm: {fileID: 0}
+  odgovaranjeScript: {fileID: 0}
   statsText: {fileID: 6656175021486886177}
   imeGrupe: {fileID: 7038323528648070454}
   procenatText: {fileID: 3179705469052963802}
+  zakonIndex: -1
 --- !u!1 &3443067131504327070
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +177,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -403,9 +406,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4638923069769861149}
-        m_TargetAssemblyTypeName: ButtonZaBiranjeGrupeScript, Assembly-CSharp
-        m_MethodName: otvoriDer
+      - m_Target: {fileID: 6597939860673149786}
+        m_TargetAssemblyTypeName: GrupaZakonaChecker, Assembly-CSharp
+        m_MethodName: IzaberiOvuGrupu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -518,6 +521,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -654,6 +658,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
